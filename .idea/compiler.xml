@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="nacos-client2.x" />
+        <module name="cloud-nacos-demos" />
+        <module name="cloud-setinel-demos" />
+        <module name="spring-cloud-nettflix" />
+        <module name="java-base" />
+        <module name="spring-base" />
+        <module name="nacos-client1.x" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
