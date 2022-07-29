@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>nacos-clients</module>
+        <module>nacos-cloud-demo</module>
     </modules>
     
     <properties>

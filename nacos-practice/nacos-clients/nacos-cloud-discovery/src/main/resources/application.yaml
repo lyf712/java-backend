@@ -1,0 +1,11 @@
+server:
+  port: 1001
+
+spring:
+  application:
+    name: nacos-discovery1001
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8847,localhost:8849,localhost:8851

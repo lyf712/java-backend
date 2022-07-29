@@ -1,0 +1,14 @@
+server:
+  port: 1001
+
+spring:
+  application:
+    name: provder1001
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.114:8847
+        # ,192.168.0.114:8849,192.168.0.114:8851,
+        username: nacos
+        password: nacos

@@ -12,6 +12,8 @@
         <module name="spring-cloud-nettflix" />
         <module name="java-base" />
         <module name="spring-base" />
+        <module name="nacos-cloud-discovery" />
+        <module name="nacos-provider1001" />
         <module name="nacos-client1.x" />
       </profile>
     </annotationProcessing>

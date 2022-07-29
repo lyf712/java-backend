@@ -14,6 +14,8 @@
         <module>spring-cloud-alibaba</module>
         <module>nacos-practice</module>
         <module>spring-cloud-nettflix</module>
+<!--        <module>nacos-cloud-discovery</module>-->
+        <module>nacos-practice/nacos-clients/nacos-cloud-discovery</module>
     </modules>
     
     <properties>

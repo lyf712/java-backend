@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/nacos-clients/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos-cloud-discovery/pom.xml" />
         <option value="$PROJECT_DIR$/nacos-practice/nacos-client2.x/pom.xml" />
       </set>
     </option>
