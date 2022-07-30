@@ -11,7 +11,9 @@
       <set>
         <option value="$PROJECT_DIR$/nacos-clients/pom.xml" />
         <option value="$PROJECT_DIR$/nacos-cloud-discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos-discovery-config/pom.xml" />
         <option value="$PROJECT_DIR$/nacos-practice/nacos-client2.x/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos-practice/nacos-clients/nacos-cloud-discovery/pom.xml" />
       </set>
     </option>
   </component>

@@ -19,8 +19,8 @@ public class ConfigTests {
     @Test
     public void testPublishConfig() throws NacosException {
         ConfigService configService = ConfigFactory.createConfigService(serverAddrStandalone);
-        configService.publishConfig("nacos.test.1", "DEFUALT_GROUP", "test:ok");
-        String content = configService.getConfig("nacos.test.1", "DEFAULT_GROUP", 2000);
+        configService.publishConfig("nacos.test.1", "DEFAULT_GROUP", "test:ok");
+        String content = configService.getConfig("nacos.test.1", "DEFAULT_GROUP", 5000);
         System.out.println(content);
         Assert.assertNotNull(content);
     }

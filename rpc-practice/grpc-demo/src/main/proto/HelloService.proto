@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.lyf.api";
+
+message Request{
+  string str1 = 1;
+}
+
+message Response{
+  string res = 1;
+}
+
+service HelloService{
+  rpc hello(Request) returns (Response);
+}

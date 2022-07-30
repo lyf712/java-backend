@@ -6,16 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="nacos-client2.x" />
         <module name="cloud-nacos-demos" />
+        <module name="grpc-server" />
         <module name="cloud-setinel-demos" />
         <module name="spring-cloud-nettflix" />
         <module name="java-base" />
+        <module name="grpc-api" />
+        <module name="dubbo-interfaces" />
+        <module name="nacos-client2.x" />
+        <module name="grpc-client" />
+        <module name="grpc-demo" />
+        <module name="dubbo-provider" />
+        <module name="spring-boot" />
         <module name="spring-base" />
-        <module name="nacos-cloud-discovery" />
         <module name="nacos-provider1001" />
         <module name="nacos-client1.x" />
+        <module name="dubbo-consumer" />
+        <module name="nacos-discorver-config" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="nacos-cloud-discovery" target="8" />
+      <module name="nacos-discovery-config" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>

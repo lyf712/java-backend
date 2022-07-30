@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.lyf.api;
+
+import "google/protobuf/any.proto";
+
+service DemoService1 {
+  rpc test1(Request) returns (Response);
+  rpc test2(Request) returns (Response);
+}
+
+service DemoService2 {
+  rpc test1(Request) returns (Response);
+  rpc test2(Request) returns (Response);
+}
+
+message Request {
+  google.protobuf.Any req = 7;
+}
+
+message Response{
+  int32 code = 1;
+  string msg = 3;
+  google.protobuf.Any body = 7;
+}
