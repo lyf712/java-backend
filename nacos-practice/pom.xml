@@ -15,6 +15,7 @@
         <module>nacos-clients</module>
         <module>nacos-cloud-demo</module>
         <module>nacos-discorver-config</module>
+        <module>nacos-office-doc</module>
     </modules>
     
     <properties>

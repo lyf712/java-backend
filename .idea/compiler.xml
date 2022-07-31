@@ -7,27 +7,34 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-nacos-demos" />
-        <module name="grpc-server" />
         <module name="cloud-setinel-demos" />
-        <module name="spring-cloud-nettflix" />
-        <module name="java-base" />
-        <module name="grpc-api" />
+        <module name="nacos-spring-cloud-config" />
+        <module name="nacos-spring-discorvery" />
+        <module name="event-bridge" />
         <module name="dubbo-interfaces" />
         <module name="nacos-client2.x" />
         <module name="grpc-client" />
         <module name="grpc-demo" />
+        <module name="netty-practice" />
+        <module name="nacos-spring-config" />
+        <module name="spring-base" />
+        <module name="rocketmq-practice" />
+        <module name="nacos-client1.x" />
+        <module name="nacos-discorver-config" />
+        <module name="nacos-spring-boot-discovery" />
+        <module name="grpc-server" />
+        <module name="spring-cloud-nettflix" />
+        <module name="java-base" />
+        <module name="grpc-api" />
+        <module name="nacos-spring-boot-config" />
         <module name="dubbo-provider" />
         <module name="spring-boot" />
-        <module name="spring-base" />
+        <module name="nacos-cloud-consumer81" />
         <module name="nacos-provider1001" />
-        <module name="nacos-client1.x" />
+        <module name="nacos-cloud-provider9001" />
         <module name="dubbo-consumer" />
-        <module name="nacos-discorver-config" />
+        <module name="nacos-cloud-provider9002" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="nacos-cloud-discovery" target="8" />
-      <module name="nacos-discovery-config" target="16" />
-    </bytecodeTargetLevel>
   </component>
 </project>

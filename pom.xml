@@ -17,6 +17,8 @@
 <!--        <module>nacos-cloud-discovery</module>-->
         <module>spring-boot</module>
         <module>rpc-practice</module>
+        <module>mq-practice</module>
+        <module>netty-practice</module>
     </modules>
     
     <properties>

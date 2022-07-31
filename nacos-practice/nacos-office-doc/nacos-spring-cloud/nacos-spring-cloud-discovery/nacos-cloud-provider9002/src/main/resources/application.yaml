@@ -1,0 +1,11 @@
+server:
+  port: 9002
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  application:
+    name: provider-service

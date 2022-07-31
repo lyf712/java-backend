@@ -1,0 +1,12 @@
+
+server:
+  port: 80
+
+nacos:
+  config:
+    server-addr: localhost:8848
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
