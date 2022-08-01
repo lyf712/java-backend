@@ -4,5 +4,5 @@ package com.lyf.rpc;
  * @author liyunfei
  */
 public interface HelloService {
-    void sayHello();
+    String sayHello(String name);
 }

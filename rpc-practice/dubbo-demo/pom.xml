@@ -54,6 +54,15 @@
                 <version>${dubbo.version}</version>
                 <type>pom</type>
             </dependency>
+    
+            <!-- Dubbo Nacos registry dependency -->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba</groupId>-->
+<!--                <artifactId>dubbo-registry-nacos</artifactId>-->
+<!--                <version>${dubbo.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
             
             <dependency>
                 <groupId>junit</groupId>

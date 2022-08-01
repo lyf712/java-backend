@@ -30,7 +30,7 @@
             <version>3.2.18.RELEASE</version>
         </dependency>
         
-        <!-- TODO 如何打包到spring,jdk,spring-cloud等集成支持？ -->
+        
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-spring-context</artifactId>

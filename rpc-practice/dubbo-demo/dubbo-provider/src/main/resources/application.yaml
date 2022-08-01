@@ -1,0 +1,18 @@
+
+dubbo:
+  application:
+    name: dubbo-provider
+
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: zk-registry
+    address: nacos://47.98.99.88:8848 # zookeeper://127.0.0.1:2181
+  config-center:
+    address: nacos://47.98.99.88:8848 # zookeeper://127.0.0.1:2181
+  metadata-report:
+    address: nacos://47.98.99.88:8848 # zookeeper://127.0.0.1:2181
+
+server:
+  port: 9001
