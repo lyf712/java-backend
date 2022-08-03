@@ -10,6 +10,7 @@ public class MqTest {
     public static void main(String[] args) {
         DefaultMQProducer producer = new DefaultMQProducer();
         //producer.
+        //producer.
         
     }
 }
