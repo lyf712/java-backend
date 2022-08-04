@@ -18,9 +18,9 @@
     
     <dependencies>
         <dependency>
-            <groupId>com.aliyun.eventbridge</groupId>
+            <groupId>com.aliyun</groupId>
             <artifactId>eventbridge-client</artifactId>
-            <version>1.0.1</version>
+            <version>1.2.6</version>
         </dependency>
     </dependencies>
 
