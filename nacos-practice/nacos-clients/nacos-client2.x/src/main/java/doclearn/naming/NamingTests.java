@@ -14,7 +14,7 @@ import org.junit.Test;
  */
 public class NamingTests {
     // 单机版
-    String serverListStandalone = "localhost:8848";
+    String serverListStandalone = "localhost:8851";
     
     @Test
     public void testRegisterServiceInstance() throws NacosException, NacosException {

@@ -9,10 +9,13 @@ import com.aliyun.eventbridge.models.GetEventBusResponse;
 import com.aliyun.eventbridge.models.PutEventsResponse;
 import com.aliyun.eventbridge.util.EventBuilder;
 import com.google.gson.Gson;
+import com.google.gson.JsonParser;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 
 /**
@@ -22,46 +25,29 @@ public class PutEventsSample {
     
     static private EventBridge eventBridgeClient;
     
-    public PutEventsSample() {
+    static  {
         Config authConfig = new Config();
-        authConfig.accessKeyId = "{accessKeyId}";
-        authConfig.accessKeySecret = "{accessKeySecret}";
-        authConfig.endpoint = "{endpoint}";
+        authConfig.accessKeyId = "LTAI5t9pwBXagE9vWP4ZRs1i";
+        authConfig.accessKeySecret = "OGWpp3FpvsgRUNicLeXI1tODmn0ajN";
+        authConfig.endpoint = "1017438417648207.eventbridge.cn-hangzhou.aliyuncs.com";
         eventBridgeClient = new EventBridgeClient(authConfig);
     }
     
     public static void main(String[] args) {
-//        EventBridgeClient client =
-//                new EventBridgeClient("","","");
-//        //EventBus bus = new AsyncEventBus();
-//        EventBuilder.builder().withData("").build();
-//        client.putEvents(new DefaultPutEventsRequest());
-    
-    
-//        Config config = new Config();
-//        config.setAccessKeyId("your accessKeyId")
-//                .setAccessKeySecret("your accessKeySecret")
-//                .setEndpoint("your endpoint");
-//        EventBridgeClient client = new EventBridgeClient(config);
-//
-//
-//        GetEventBusRequest describeEventBusRequest = new GetEventBusRequest();
-//        describeEventBusRequest.eventBusName = "demo-bus";
-//
-//        GetEventBusResponse deScribeResponse = client.getEventBus(describeEventBusRequest);
-    
+        System.out.println(UUID.randomUUID());
         List<CloudEvent> cloudEventList = new ArrayList<>();
-        cloudEventList.add(EventBuilder.builder()
-                .withId("a5074581-7e74-4e4c-868f-47e7afdf****")
-                //.withSource(URI.create("acs.oss"))
-                .withType("oss:ObjectCreated:PostObject")
-                .withSubject("acs:oss:cn-hangzhou:{yourAccountId}:xls-papk/game_apk/123.jpg")
-                .withTime(new Date())
-                .withJsonStringData("{ \"E-Mail\": \"${email}\" }")
-                .withAliyunEventBus("demo-bus")
-                .build());
+        
+//        cloudEventList.add(EventBuilder.builder()
+//                .withId("a5074581-7e74-4e4c-868f-47e7"+ UUID.randomUUID().toString().substring(0,6))
+//                .withSource(URI.create("mcrioservice.event"))
+//                .withType("oss:ObjectCreated:PostObject")
+//                .withSubject("acs:eventbridge:cn-hangzhou:1017438417648207:eventbus/demo-bus/rule/service-client-push-rule")
+//                .withTime(new Date())
+//                .withJsonStringData("{ \"name\": \"hello\"}")
+//                .withAliyunEventBus("demo-bus")
+//                .build());
+ 
         PutEventsResponse putEventsResponse = eventBridgeClient.putEvents(cloudEventList);
         System.out.println(new Gson().toJson(putEventsResponse));
-        
     }
 }

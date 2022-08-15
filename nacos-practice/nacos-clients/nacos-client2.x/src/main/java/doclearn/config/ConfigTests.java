@@ -6,6 +6,8 @@ import com.alibaba.nacos.api.exception.NacosException;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * 通过jdk-java client1.x 测试配置管理 （1）nacos client1.x通过走http的方式.
  *
@@ -14,16 +16,26 @@ import org.junit.Test;
 public class ConfigTests {
     
     //测试单机版
-    String serverAddrStandalone = "localhost:8848";
+    String serverAddrStandalone = "localhost:8851";
     
     @Test
     public void testPublishConfig() throws NacosException {
         ConfigService configService = ConfigFactory.createConfigService(serverAddrStandalone);
-        configService.publishConfig("nacos.test.1", "DEFAULT_GROUP", "test:ok");
-        String content = configService.getConfig("nacos.test.1", "DEFAULT_GROUP", 5000);
-        System.out.println(content);
+        configService.publishConfig("rpc-test.text", "DEFAULT_GROUP", "ok");
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String content = configService.getConfig("rpc-test.text", "DEFAULT_GROUP", 5000);
         Assert.assertNotNull(content);
     }
     
+    @Test
+    public void testRemoveConfig() throws NacosException {
+        ConfigService configService = ConfigFactory.createConfigService(serverAddrStandalone);
+        boolean rs = configService.removeConfig("rpc-test.text","DEFAULT_GROUP");
+        Assert.assertTrue(rs);
+    }
     
 }

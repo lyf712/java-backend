@@ -14,13 +14,13 @@ import org.junit.Test;
 public class ConfigTests {
     
     //测试单机版
-    String serverAddrStandalone = "localhost:8848";
+    String serverAddrStandalone = "localhost:8851";
     String serverAddrCluster = "localhost:8847,localhost:8849,localhost:8851";
     
     @Test
     public void testPublishConfig() throws NacosException {
-        ConfigService configService = ConfigFactory.createConfigService(serverAddrCluster);
-        //configService.publishConfig("nacos.test.cluster1", "DEFAULT_GROUP", "test:ok");
+        ConfigService configService = ConfigFactory.createConfigService(serverAddrStandalone);
+        configService.publishConfig("nacos.test.cluster1", "DEFAULT_GROUP", "test:ok");
         // --sleep
         String content = configService.getConfig("nacos.test.cluster1", "DEFAULT_GROUP", 5000);
         System.out.println(content);

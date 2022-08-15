@@ -16,6 +16,7 @@
         <module name="grpc-client" />
         <module name="grpc-demo" />
         <module name="netty-practice" />
+        <module name="spring-boot-initilzar" />
         <module name="nacos-spring-config" />
         <module name="spring-base" />
         <module name="rocketmq-practice" />
@@ -26,6 +27,8 @@
         <module name="spring-cloud-nettflix" />
         <module name="java-base" />
         <module name="grpc-api" />
+        <module name="default-webhook" />
+        <module name="base-network" />
         <module name="nacos-spring-boot-config" />
         <module name="dubbo-provider" />
         <module name="spring-boot" />

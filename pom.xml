@@ -19,6 +19,9 @@
         <module>rpc-practice</module>
         <module>mq-practice</module>
         <module>netty-practice</module>
+        <module>default-webhook</module>
+        <module>communication-network</module>
+        <module>spring-boot-initilzar</module>
     </modules>
     
     <properties>
