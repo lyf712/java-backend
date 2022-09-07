@@ -30,6 +30,7 @@
         <module name="default-webhook" />
         <module name="base-network" />
         <module name="nacos-spring-boot-config" />
+        <module name="os-mock-practice" />
         <module name="dubbo-provider" />
         <module name="spring-boot" />
         <module name="nacos-cloud-consumer81" />

@@ -1,6 +1,6 @@
 package com.lyf.design.designmodel.proxy.dynamicproxy.jdk;
 
-import com.lyf.design.learn.designmodel.proxy.staticproxy.v0.Actionable;
+import com.lyf.design.designmodel.proxy.staticproxy.v0.Actionable;
 
 /**
  * @AUTHOR LYF

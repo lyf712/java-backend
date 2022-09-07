@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.config.transactionbroadcast;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -14,9 +14,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestAspect {
     
-    private static final String SERVICE_1 = "execution(* com.example.demo.service.TestService.test(..))";
+    private static final String SERVICE_1 = "execution(* com.example.demo.service.transactionbroadcast.TestService.test(..))";
     
-    private static final String SERVICE_2 = "execution(* com.example.demo.service.TestService.test2(..))";
+    private static final String SERVICE_2 = "execution(* com.example.demo.service.transactionbroadcast.TestService.test2(..))";
     
     @Around(SERVICE_1)
     public Object test1(ProceedingJoinPoint pjp) throws Throwable {

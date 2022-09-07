@@ -22,6 +22,7 @@
         <module>default-webhook</module>
         <module>communication-network</module>
         <module>spring-boot-initilzar</module>
+        <module>os-mock-practice</module>
     </modules>
     
     <properties>

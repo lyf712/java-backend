@@ -16,11 +16,12 @@ import java.util.concurrent.TimeUnit;
 public class ConfigTests {
     
     //测试单机版
-    String serverAddrStandalone = "localhost:8851";
+    String serverAddrStandalone = "localhost:8848";
     
     @Test
     public void testPublishConfig() throws NacosException {
         ConfigService configService = ConfigFactory.createConfigService(serverAddrStandalone);
+        
         configService.publishConfig("rpc-test.text", "DEFAULT_GROUP", "ok");
         try {
             TimeUnit.SECONDS.sleep(1);
