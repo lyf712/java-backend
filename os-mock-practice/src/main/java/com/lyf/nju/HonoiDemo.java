@@ -1,4 +1,4 @@
-package com.lyf;
+package com.lyf.nju;
 
 /**
  * 汉罗塔递归去理解状态机，状态的迁移
