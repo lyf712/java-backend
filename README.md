@@ -94,8 +94,15 @@ learn and practice of java backend,such as javabase,spring,rpc and so on
 - Spring系列
 
 4. 中间件
-- MQ类
+- MQ类（RocketMQ、Kafka）
+- 搜索类（ES）
 - 分布式类
+
+
+5. 容器、运维
+
+- Linux及shell
+- Docker及k8s
 
 ### 项目与方案解决
 
@@ -104,5 +111,10 @@ learn and practice of java backend,such as javabase,spring,rpc and so on
 - 云原生，DevOps
 
 2. 开源项目
+- OpenJdk:学习集合、语言等工具的设计和思维、理解JUC、NetWork的设计以及底层C++的联系
+- Tomcat及Spring系列源码：学习轻量级Web框架的设计
+- fastjson、等工具类：
+- nacos：分布式系统的设计思想
+- RockeMq: 消息中间件的设计思想
 
 
