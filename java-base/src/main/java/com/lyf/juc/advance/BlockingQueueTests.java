@@ -3,6 +3,7 @@ package com.lyf.juc.advance;
 import org.junit.Test;
 
 import java.sql.Time;
+import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -76,6 +77,7 @@ public class BlockingQueueTests {
     
     @Test
     public void testBlockingQ(){
+      
         final int capacity = 10;
         final int workerCount = 4;
         final LogService logService = new LogService();
