@@ -5,7 +5,13 @@ learn and practice of java backend,such as javabase,spring,rpc and so on
 
 >该项目为个人学习Java后端知识的练习及总结项目,包含Java的基础语法、设计模式以及Spring框架、分布式等系列知识。
 
-## 二、学习路线
+## 二、目录介绍
+
+![img.png](files/catalog.png)
+
+
+---
+## 三、学习路线
 
 ### 计算机基础
 
@@ -64,7 +70,17 @@ learn and practice of java backend,such as javabase,spring,rpc and so on
 
 
 4. 计算机网络（2022.10-2022.12）
+- 学习基本的网络模型，通信的过程
+- 掌握并熟悉TCP、IP，HTTP
+- 清楚网络的连接过程，理解cookie、session等作用
 
+推荐
+（1）网络是怎么连接的
+（2）计算机网络基础（谢希仁）
+（3）计算机网络：自顶向下
+（4）HTTP权威指南
+（5）Unix编程
+学习时，可结合Java的通信框架以及C/S模型的设计
 
 5. 数据结构与算法（2022.10-2022.12）
 
@@ -117,4 +133,10 @@ learn and practice of java backend,such as javabase,spring,rpc and so on
 - nacos：分布式系统的设计思想
 - RockeMq: 消息中间件的设计思想
 
+### 前沿技术
 
+1. 云计算
+
+2. 大数据、数据挖掘
+
+3. 人工智能
