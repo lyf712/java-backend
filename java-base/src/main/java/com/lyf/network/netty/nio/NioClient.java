@@ -18,10 +18,10 @@ public class NioClient {
     public static void main(String[] args) {
         try {
             SocketChannel socketChannel = SocketChannel.open();
-            socketChannel.bind(new InetSocketAddress("localhost",80));
+            socketChannel.bind(new InetSocketAddress("localhost",99));
             socketChannel.configureBlocking(false);
             Selector selector = Selector.open();
-            boolean isConnection = socketChannel.connect(new InetSocketAddress("localhost",99));
+            boolean isConnection = socketChannel.connect(new InetSocketAddress("localhost",80));
             if(isConnection){
                 System.out.println("connected");
                 socketChannel.register(selector,SelectionKey.OP_READ);
