@@ -49,7 +49,7 @@ public class NettyServer {
                             ByteBuf demiter = Unpooled.copiedBuffer("$_".getBytes());
                             socketChannel.pipeline()
                                     // 解决拆包、粘包问题
-                                    .addLast(new DelimiterBasedFrameDecoder(1024, demiter)).addLast(new StringDecoder())
+                                    //.addLast(new DelimiterBasedFrameDecoder(1024, demiter)).addLast(new StringDecoder())
                                     .addLast(new ChannelHandlerAdapter() {
                                         @Override
                                         public void channelRead(ChannelHandlerContext ctx, Object msg)
@@ -59,7 +59,7 @@ public class NettyServer {
                                             ByteBuf buf = (ByteBuf) msg;
                                             byte[] bytes = new byte[buf.readableBytes()];
                                             buf.readBytes(bytes);
-                                            System.out.println("receive::" + new String(bytes));
+                                            System.out.println("server receive::" + new String(bytes));
                                             
                                             ByteBuf respBytes = Unpooled.copiedBuffer("ok".getBytes());
                                             ctx.write(respBytes);

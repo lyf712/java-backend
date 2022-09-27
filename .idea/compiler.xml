@@ -18,6 +18,7 @@
         <module name="netty-practice" />
         <module name="spring-boot-initilzar" />
         <module name="nacos-spring-config" />
+        <module name="boot-demo-docker" />
         <module name="spring-base" />
         <module name="rocketmq-practice" />
         <module name="nacos-client1.x" />
@@ -40,5 +41,6 @@
         <module name="nacos-cloud-provider9002" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="16" />
   </component>
 </project>
