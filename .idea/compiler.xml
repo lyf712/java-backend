@@ -12,6 +12,7 @@
         <module name="nacos-spring-discorvery" />
         <module name="event-bridge" />
         <module name="dubbo-interfaces" />
+        <module name="tomcat-learn" />
         <module name="nacos-client2.x" />
         <module name="grpc-client" />
         <module name="grpc-demo" />

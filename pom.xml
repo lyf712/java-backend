@@ -24,6 +24,7 @@
         <module>spring-boot-initilzar</module>
         <module>os-mock-practice</module>
         <module>spring-boot-demos</module>
+        <module>tomcat-learn</module>
     </modules>
     
     <properties>
