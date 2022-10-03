@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   
+    <properties>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+        <project.version>1.0-SNAPSHOT</project.version>
+    </properties>
+   
+    <parent>
+        <artifactId>spring-cloud-alibaba</artifactId>
+        <groupId>org.example</groupId>
+        <version>${project.version}</version>
+    </parent>
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <artifactId>cloud-alibaba-demo</artifactId>
+    <packaging>pom</packaging>
+<!--    springboot如何组织:2.3.12.RELEASE-->
+    <modules>
+        <module>alibaba-demo-common</module>
+        <module>alibaba-demo-user</module>
+        <module>alibaba-demo-order</module>
+        <module>alibaba-demo-product</module>
+    </modules>
+    
+ 
+    
+    <!--version decision：https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E  -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.3.12.RELEASE</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR12</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.9.RELEASE</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

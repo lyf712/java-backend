@@ -3,23 +3,29 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>java-backend</artifactId>
+        <artifactId>cloud-alibaba-demo</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     
-    <artifactId>spring-cloud-alibaba</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>cloud-nacos-demos</module>
-        <module>cloud-setinel-demos</module>
-        <module>cloud-alibaba-demo</module>
-    </modules>
+    <artifactId>alibaba-demo-order</artifactId>
     
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>alibaba-demo-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+    
 </project>
