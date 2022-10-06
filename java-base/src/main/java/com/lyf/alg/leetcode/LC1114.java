@@ -38,6 +38,11 @@ class Foo {
         lock.unlock();
         //singal[0]=0;
         //singal[1]=1;
+        //Byte b = new Byte(1);
+        byte b = 1;
+        //new Byte((byte) 1);
+        //Byte b = (Byte) 1;
+        Byte.valueOf("1");
     }
     
     public void second(Runnable printSecond) throws InterruptedException {
