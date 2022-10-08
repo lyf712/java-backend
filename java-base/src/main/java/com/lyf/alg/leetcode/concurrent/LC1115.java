@@ -1,4 +1,4 @@
-package com.lyf.alg.leetcode;
+package com.lyf.alg.leetcode.concurrent;
 
 import org.junit.Test;
 

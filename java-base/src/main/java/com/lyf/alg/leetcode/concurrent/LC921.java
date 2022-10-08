@@ -1,4 +1,4 @@
-package com.lyf.alg.leetcode;
+package com.lyf.alg.leetcode.concurrent;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
