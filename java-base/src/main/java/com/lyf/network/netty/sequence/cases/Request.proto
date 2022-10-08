@@ -1,0 +1,10 @@
+// 语法格式
+syntax = "proto3";
+package com.lyf.network.netty.sequence.cases;
+option java_package = 'com.lyf.network.netty.sequence.cases';
+option java_outer_classname = 'RequestProto';
+
+message Request{
+  string username=1;
+  string param=3;
+}
