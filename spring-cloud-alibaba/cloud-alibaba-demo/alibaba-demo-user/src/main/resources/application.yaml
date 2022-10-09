@@ -1,8 +1,22 @@
+
 server:
   port: 8081
-
+# 配置注册中心（ZK、Nacos）
 spring:
   cloud:
+    #: [ ClientAuthPluginManager ] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+    #: [ ClientAuthPluginManager ] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+    # 理解nacos集成SpringCloud
     nacos:
       discovery:
         server-addr: localhost:8848
+# 配置数据源
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306
+    username: root
+    password: 123321
+
+  application:
+    name: demo-user

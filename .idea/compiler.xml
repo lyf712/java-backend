@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="alibaba-demo-order" />
-        <module name="cloud-nacos-demos" />
         <module name="cloud-setinel-demos" />
         <module name="nacos-spring-cloud-config" />
         <module name="nacos-spring-discorvery" />
@@ -28,6 +27,7 @@
         <module name="nacos-client1.x" />
         <module name="nacos-discorver-config" />
         <module name="nacos-spring-boot-discovery" />
+        <module name="cloud-demo-config" />
         <module name="grpc-server" />
         <module name="spring-cloud-nettflix" />
         <module name="java-base" />

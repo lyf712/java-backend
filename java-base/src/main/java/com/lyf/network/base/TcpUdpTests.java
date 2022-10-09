@@ -18,11 +18,11 @@ public class TcpUdpTests {
     @Test
     public void testUdpServer() {
         try {
-            DatagramSocket datagramSocket = new DatagramSocket(90,InetAddress.getLocalHost());
-           // datagramSocket.bind(new InetSocketAddress(100));
-            DatagramPacket datagramPacket = new DatagramPacket("receive".getBytes(),4);
+            DatagramSocket datagramSocket = new DatagramSocket(90, InetAddress.getLocalHost());
+            // datagramSocket.bind(new InetSocketAddress(100));
+            DatagramPacket datagramPacket = new DatagramPacket("receive".getBytes(), 4);
             datagramSocket.receive(datagramPacket);
-            System.out.println("receive::"+ Arrays.toString(datagramPacket.getData()));
+            System.out.println("receive::" + Arrays.toString(datagramPacket.getData()));
             
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,8 +34,8 @@ public class TcpUdpTests {
         try {
             DatagramSocket datagramSocket = new DatagramSocket(80);
             //datagramSocket.connect(new InetSocketAddress(90));
-            DatagramPacket datagramPacket = new DatagramPacket("hello".getBytes(),
-                    0,5,InetAddress.getLocalHost(),90);
+            DatagramPacket datagramPacket = new DatagramPacket("hello".getBytes(), 0, 5, InetAddress.getLocalHost(),
+                    90);
             
             System.out.println("发送UDP报");
             datagramSocket.send(datagramPacket);
@@ -43,6 +43,4 @@ public class TcpUdpTests {
             e.printStackTrace();
         }
     }
-    
-    
 }
