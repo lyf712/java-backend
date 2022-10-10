@@ -1,0 +1,27 @@
+server:
+  port: 8012
+
+spring:
+  profiles:
+    active: dev
+
+  application:
+    name: demo-discovery-consumer
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'

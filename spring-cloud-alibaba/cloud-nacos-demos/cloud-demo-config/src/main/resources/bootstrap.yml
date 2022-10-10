@@ -1,0 +1,42 @@
+# spring.c
+spring:
+  application:
+    name: cloud-demo-config
+  cloud:
+    nacos:
+      config:
+        # https://nacos.io/zh-cn/docs/quick-start-spring-cloud.html
+        server-addr: localhost:8848
+        file-extension: properties
+
+  profiles:
+    active: dev
+
+server:
+  port: 8010
+
+## actuator
+management:
+  server:
+    port: 8081
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+
+    web:
+      exposure:
+        include: '*'
+
+      base-path: /actuator
+
+  endpoint:
+    health:
+      show-details: always
+
+#management:
+#  endpoint:
+#    nacos-config:
+#      enabled: true
+
+

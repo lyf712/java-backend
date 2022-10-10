@@ -8,6 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="alibaba-demo-order" />
+        <module name="cloud-demo-discovery-dubbo-consumer" />
+        <module name="cloud-demo-discovery-consumer" />
         <module name="cloud-setinel-demos" />
         <module name="nacos-spring-cloud-config" />
         <module name="nacos-spring-discorvery" />
@@ -25,6 +27,7 @@
         <module name="spring-base" />
         <module name="rocketmq-practice" />
         <module name="nacos-client1.x" />
+        <module name="cloud-demo-discovery-dubbo-provider" />
         <module name="nacos-discorver-config" />
         <module name="nacos-spring-boot-discovery" />
         <module name="cloud-demo-config" />
@@ -38,10 +41,12 @@
         <module name="nacos-spring-boot-config" />
         <module name="os-mock-practice" />
         <module name="dubbo-provider" />
+        <module name="cloud-demo-discovery-dubbo-api" />
         <module name="spring-boot" />
         <module name="nacos-cloud-consumer81" />
         <module name="nacos-provider1001" />
         <module name="alibaba-demo-user" />
+        <module name="cloud-demo-discovery-provider" />
         <module name="nacos-cloud-provider9001" />
         <module name="dubbo-consumer" />
         <module name="nacos-cloud-provider9002" />

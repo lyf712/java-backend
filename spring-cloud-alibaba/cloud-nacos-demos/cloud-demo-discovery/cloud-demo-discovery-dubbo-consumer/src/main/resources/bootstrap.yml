@@ -1,0 +1,18 @@
+server:
+  port: 8900
+
+spring:
+  application:
+    name: cloud-demo-discovery-dubbo-consumer
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+# nacos registry, DEFAULT_GROUP cloud-demo-discovery-dubbo-provider 192.168.247.1:8888 register finished
+dubbo:
+  application:
+    id: cloud-demo-discovery-dubbo-consumer
+  cloud:
+    # 订阅服务提供者, * 提供所有
+    subscribed-services: cloud-demo-discovery-dubbo-provider
