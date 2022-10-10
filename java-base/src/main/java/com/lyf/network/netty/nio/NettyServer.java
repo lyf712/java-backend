@@ -62,7 +62,7 @@ public class NettyServer {
                                             System.out.println("server receive::" + new String(bytes));
                                             
                                             ByteBuf respBytes = Unpooled.copiedBuffer("ok".getBytes());
-                                            ctx.write(respBytes);
+                                            ctx.writeAndFlush(respBytes);
                                         }
                                     })
                             
