@@ -10,10 +10,12 @@
         <module name="alibaba-demo-order" />
         <module name="cloud-demo-discovery-dubbo-consumer" />
         <module name="cloud-demo-discovery-consumer" />
-        <module name="cloud-setinel-demos" />
+        <module name="cloud-demo-setinel-dubbo-service-api" />
         <module name="nacos-spring-cloud-config" />
         <module name="nacos-spring-discorvery" />
         <module name="event-bridge" />
+        <module name="cloud-demo-setinel-dubbo-consumer" />
+        <module name="cloud-demo-setinel-dubbo-provider" />
         <module name="dubbo-interfaces" />
         <module name="alibaba-demo-product" />
         <module name="tomcat-learn" />
@@ -32,6 +34,7 @@
         <module name="nacos-spring-boot-discovery" />
         <module name="cloud-demo-config" />
         <module name="grpc-server" />
+        <module name="cloud-demo-setinel-gateway" />
         <module name="spring-cloud-nettflix" />
         <module name="java-base" />
         <module name="grpc-api" />
@@ -50,6 +53,7 @@
         <module name="nacos-cloud-provider9001" />
         <module name="dubbo-consumer" />
         <module name="nacos-cloud-provider9002" />
+        <module name="cloud-demo-setinel-dubbo-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="16" />

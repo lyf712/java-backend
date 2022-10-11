@@ -10,10 +10,37 @@
     <modelVersion>4.0.0</modelVersion>
     
     <artifactId>cloud-setinel-demos</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>cloud-demo-setinel-dubbo-provider</module>
+        <module>cloud-demo-setinel-dubbo-consumer</module>
+        <module>cloud-demo-setinel-gateway</module>
+        <module>cloud-demo-setinel-dubbo-service-api</module>
+        <module>cloud-demo-setinel-dubbo-gateway</module>
+    </modules>
     
     <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.3.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

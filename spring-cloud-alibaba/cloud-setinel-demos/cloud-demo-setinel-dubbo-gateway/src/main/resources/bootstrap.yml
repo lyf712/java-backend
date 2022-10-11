@@ -1,0 +1,28 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-demo-setinel-dubbo-provider
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          lower-case-service-id: true
+
+      routes:
+        - id: services-route
+          # 通过服务名--
+          uri: http://localhost:80/
+          predicates:
+            - Path=/demo/**
+
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8719

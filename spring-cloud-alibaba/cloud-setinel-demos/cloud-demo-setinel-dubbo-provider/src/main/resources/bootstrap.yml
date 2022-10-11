@@ -1,0 +1,35 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: cloud-demo-setinel-dubbo-provider
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+
+#  profiles:
+#    active: dev
+
+dubbo:
+  application:
+    id: cloud-demo-setinel-dubbo-provider
+  scan:
+    base-packages: com.lyf.sentinel.provider
+
+  protocol:
+    name: dubbo
+    ## 配置文件也固定好类型
+    port: -1
+
+  cloud:
+    # 若不订阅服务？
+    subscribed-services: '*'
+

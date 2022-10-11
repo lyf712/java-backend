@@ -1,0 +1,40 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-demo-setinel-dubbo-consumer
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+    sentinel:
+      transport:
+        # web页面
+        dashboard: localhost:8080
+        # sentinel端口
+        port: 8719
+
+#  profiles:
+#    active: dev
+
+dubbo:
+  application:
+    id: cloud-demo-setinel-dubbo-consumer
+  scan:
+    base-packages: com.lyf.sentinel.consumer
+
+  protocol:
+    name: dubbo
+    ## 配置文件也固定好类型
+    port: -1
+
+  cloud:
+    # 若不订阅服务？
+    subscribed-services: '*'
+#  默认1000ms
+#  consumer:
+#    timeout:
+
