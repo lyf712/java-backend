@@ -15,6 +15,7 @@
         <module>cloud-nacos-demos</module>
         <module>cloud-setinel-demos</module>
         <module>cloud-alibaba-demo</module>
+        <module>cloud-stream-demos</module>
     </modules>
     
     <properties>

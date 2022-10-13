@@ -1,0 +1,37 @@
+server:
+  port: 8880
+
+spring:
+  application:
+    name: cloud-analysis-auth-provider
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+#dubbo:
+#  registry:
+#    address:
+
+#dubbo:
+#  cloud:
+#    subscribed-services:
+
+dubbo:
+  application:
+    #
+    id: cloud-analysis-auth-provider
+  scan:
+    # 服务扫描基础包
+    base-packages: com.lyf.auth
+    # org.springframework.cloud.alibaba.dubbo.bootstrap
+  protocol:
+    # 协议
+    name: dubbo
+    # dubbo协议端口（-1自增端口，从20880开始）
+    port: -1
+  cloud:
+    subscribed-services: '*'
+
+

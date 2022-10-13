@@ -3,6 +3,7 @@ package com.lyf.network.netty.decode;
 import com.google.protobuf.MessageLite;
 import com.lyf.network.netty.sequence.cases.RequestProto;
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -10,6 +11,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.DelimiterBasedFrameDecoder;
+import io.netty.handler.codec.FixedLengthFrameDecoder;
+import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufDecoder;
 import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
@@ -39,6 +43,22 @@ public class TestNettyServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
+    
+                               //分隔符解码器
+                               String demeter = "$_";
+                               DelimiterBasedFrameDecoder delimiterBasedFrameDecoder =
+                                       new DelimiterBasedFrameDecoder(1024, Unpooled.copiedBuffer(demeter.getBytes()));
+                               // 固定长度解码器
+                               FixedLengthFrameDecoder fixedLengthFrameDecoder = new FixedLengthFrameDecoder(20);
+                               
+                               
+                               // 以分隔符进行切分 '\n' 客户端发送时需要--System.getProperty("")
+                               socketChannel.pipeline().addLast(
+                                    new LineBasedFrameDecoder(1024)
+                               );
+                               // 需要加载StringDecoder之前
+
+    
                                socketChannel.pipeline().addLast(new StringDecoder());
                                socketChannel.pipeline().addLast(new StringEncoder());
                                
@@ -54,8 +74,10 @@ public class TestNettyServer {
                                socketChannel.pipeline().addLast(new ProtobufDecoder(RequestProto.Request.getDefaultInstance()));
                                socketChannel.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
                                socketChannel.pipeline().addLast(new ProtobufEncoder());
-                               
-                               // 添加编解码进pipeline
+    
+                             
+    
+                            // 添加编解码进pipeline
                                socketChannel.pipeline()
                                             .addLast(new TestServerChannelHandler());
                                // 思考 selector的体现？，封装在底层去轮询channel了？

@@ -9,33 +9,34 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     
-    <artifactId>cloud-nacos-demos</artifactId>
+    <artifactId>cloud-stream-demos</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>cloud-demo-config</module>
-        <module>cloud-demo-discovery</module>
-        <module>cloud-analysis-auth-problem</module>
+        <module>cloud-stream-rocketmq-kafka</module>
     </modules>
     
     <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-
+    
     <dependencyManagement>
-        <!--版本搭配-->
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.7.0</version>
+                <version>2.3.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2021.1</version>
+                <version>2.2.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
 </project>
