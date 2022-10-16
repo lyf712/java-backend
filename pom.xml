@@ -25,6 +25,7 @@
         <module>os-mock-practice</module>
         <module>spring-boot-demos</module>
         <module>tomcat-learn</module>
+        <module>daily-app-util</module>
     </modules>
     
     <properties>
