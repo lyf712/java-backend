@@ -1,0 +1,18 @@
+version: 1.0.0
+services:
+  platform-provider:
+    build: cloud-demo-setinel-dubbo-provider
+    restart: always
+    ports:
+    - 8080:8080
+  platform-consumer:
+    build: cloud-demo-setinel-dubbo-consumer
+    restart: always
+    ports:
+    - 80:80
+  # --
+  platform-gateway:
+    build: cloud-demo-setinel-dubbo-gateway
+    restart: always
+    ports:
+    - 9527:9527
