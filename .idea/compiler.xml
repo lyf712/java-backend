@@ -36,6 +36,7 @@
         <module name="cloud-demo-setinel-dubbo-consumer" />
         <module name="cloud-demo-setinel-dubbo-provider" />
         <module name="dubbo-interfaces" />
+        <module name="demo" />
         <module name="alibaba-demo-product" />
         <module name="nacos-client2.x" />
         <module name="netty-practice" />
