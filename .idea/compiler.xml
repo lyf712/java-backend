@@ -26,7 +26,9 @@
         <module name="cloud-stream-rocketmq-kafka" />
         <module name="base-network" />
         <module name="nacos-spring-boot-config" />
+        <module name="simple-demo" />
         <module name="spring-boot" />
+        <module name="cxf-client" />
         <module name="nacos-cloud-consumer81" />
         <module name="nacos-provider1001" />
         <module name="nacos-cloud-provider9001" />
@@ -39,6 +41,7 @@
         <module name="demo" />
         <module name="alibaba-demo-product" />
         <module name="nacos-client2.x" />
+        <module name="cxf-server" />
         <module name="netty-practice" />
         <module name="spring-boot-initilzar" />
         <module name="nacos-spring-config" />

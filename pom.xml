@@ -26,6 +26,8 @@
         <module>spring-boot-demos</module>
         <module>tomcat-learn</module>
         <module>daily-app-util</module>
+        <module>java-webservice</module>
+        <module>java-crawler</module>
     </modules>
     
     <properties>
