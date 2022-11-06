@@ -14,20 +14,23 @@
  *    limitations under the License.
  */
 
-package com.lyf.demo.storage;
+package com.lyf.design.designmodel.decorator;
+
+import org.junit.Test;
 
 import java.io.FileInputStream;
+import java.io.InputStream;
 
 /**
  * @authorliyunfei
- * @date2022/11/3
+ * @date2022/11/6
  **/
-public class File {
-    private final String DEFAULT_FILE_PATH = "";
-          //  "E:\\JavaProjects\\LearnProjects\\java-backend\\java-crawler\\simple-demo\\src\main\\resources";
+public class IOSample {
+    @Test
+    public void testIO(){
+       //  InputStream //abstract class InputStream
+       //  FileInputStream
 
-    boolean writeToFile(){
-        //FileInputStream fileInputStream = new FileInputStream(DEFAULT_FILE_PATH);
-        return true;
+
     }
 }

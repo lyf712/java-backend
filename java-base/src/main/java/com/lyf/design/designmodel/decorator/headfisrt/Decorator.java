@@ -14,20 +14,15 @@
  *    limitations under the License.
  */
 
-package com.lyf.demo.storage;
-
-import java.io.FileInputStream;
+package com.lyf.design.designmodel.decorator.headfisrt;
 
 /**
  * @authorliyunfei
- * @date2022/11/3
+ * @date2022/11/6
  **/
-public class File {
-    private final String DEFAULT_FILE_PATH = "";
-          //  "E:\\JavaProjects\\LearnProjects\\java-backend\\java-crawler\\simple-demo\\src\main\\resources";
+public abstract class Decorator implements Component{
+//       protected Component component;
+       // 思考此处--
 
-    boolean writeToFile(){
-        //FileInputStream fileInputStream = new FileInputStream(DEFAULT_FILE_PATH);
-        return true;
-    }
+       // abstract getDesc();
 }

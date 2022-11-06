@@ -14,20 +14,23 @@
  *    limitations under the License.
  */
 
-package com.lyf.demo.storage;
+package com.lyf.design.designmodel.decorator.headfisrt;
 
-import java.io.FileInputStream;
+import org.junit.Test;
 
 /**
  * @authorliyunfei
- * @date2022/11/3
+ * @date2022/11/6
  **/
-public class File {
-    private final String DEFAULT_FILE_PATH = "";
-          //  "E:\\JavaProjects\\LearnProjects\\java-backend\\java-crawler\\simple-demo\\src\main\\resources";
+public class Tests {
+    @Test
+    public void test1(){
+        Decorator decorator = new Decorator1(new Decorator2(new ConcreteComponent1()));
+        decorator.method();// 递归过程--- 由外至内；；；对比直接采用List存储装饰的类
+//        com.lyf.design.designmodel.decorator.headfisrt.Decorator1 decorator handle
+//        com.lyf.design.designmodel.decorator.headfisrt.Decorator2 decorator handle
+//        ConcreteComponent1 execute method
 
-    boolean writeToFile(){
-        //FileInputStream fileInputStream = new FileInputStream(DEFAULT_FILE_PATH);
-        return true;
+
     }
 }
