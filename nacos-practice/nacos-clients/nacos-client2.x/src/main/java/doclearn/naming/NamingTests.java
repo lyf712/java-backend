@@ -14,17 +14,20 @@ import org.junit.Test;
  */
 public class NamingTests {
     // 单机版
-    String serverListStandalone = "localhost:8851";
+    String serverListStandalone = "localhost:8848";//8851
     
     @Test
     public void testRegisterServiceInstance() throws NacosException, NacosException {
         
         NamingService namingService = NamingFactory.createNamingService(serverListStandalone);
+
         Instance instance = new Instance();
         instance.setInstanceId("provider.id.1");
         instance.setServiceName("provider-test-1");
         instance.setIp("localhost");
         instance.setPort(1001);
+        instance.setClusterName("pro");
+        //Caused by: ErrCode:403, ErrMsg:unknown user!
         namingService.registerInstance("provider-test-1",instance);
         
         namingService.getAllInstances("provider-test-1").forEach(System.out::println);

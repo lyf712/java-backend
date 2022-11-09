@@ -19,7 +19,7 @@ import java.util.Map;
  */
 public class NamingTests {
     // 单机版
-    String serverListStandalone = "localhost:8847";
+    String serverListStandalone = "localhost:8848";//8847
     
     String serverAddrCluster = "localhost:8847,localhost:8849,localhost:8851";
     
@@ -41,7 +41,8 @@ public class NamingTests {
     @Test
     public void testRegisterInstanceCluster() throws NacosException {
         NamingService naming = NamingFactory.createNamingService(serverListStandalone);
-        naming.registerInstance("nacos.test.3", "11.11.11.11", 8888, "TEST1");
+
+        naming.registerInstance("nacos.test.3", "11.11.11.11", 8888, "pro");
     
 //        Instance instance = new Instance();
 //        instance.setIp("55.55.55.55");
