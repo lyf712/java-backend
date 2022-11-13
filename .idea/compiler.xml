@@ -40,6 +40,7 @@
         <module name="dubbo-interfaces" />
         <module name="demo" />
         <module name="alibaba-demo-product" />
+        <module name="kafka-practice" />
         <module name="nacos-client2.x" />
         <module name="cxf-server" />
         <module name="netty-practice" />

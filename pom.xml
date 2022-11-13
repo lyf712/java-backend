@@ -28,6 +28,7 @@
         <module>daily-app-util</module>
         <module>java-webservice</module>
         <module>java-crawler</module>
+        <module>mq-practice/kafka-practice</module>
     </modules>
     
     <properties>
