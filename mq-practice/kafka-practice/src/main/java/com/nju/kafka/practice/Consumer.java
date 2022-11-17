@@ -31,9 +31,9 @@ import java.util.Properties;
  * @date2022/11/13
  **/
 public class Consumer {
-    private final static String TOPIC_NAME = "topic-bigdata-1";
+    private final static String TOPIC_NAME = "test2";
     private final static String CONSUMER_GROUP_NAME = "testGroup";
-    private final static String KAFKA_SERVERS_CLUSTER_STR = "worker1,worker2,worker3:9092";//集群用逗号分隔
+    private final static String KAFKA_SERVERS_CLUSTER_STR = "localhost:9092";//集群用逗号分隔172.92.240.61
 
     public static void main(String[] args) {
 

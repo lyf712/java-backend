@@ -41,6 +41,8 @@ public class JsoupTest {
     //https://gitee.com/explore/all?order=starred&page=3
     private final static String BASE_ORDER_SEARCH_URL = "https://gitee.com/explore/all?order=starred&page=";// + pageNo
 
+    private final static String GOOGLE_PAY_URL = "https://play.google.com/store/apps?device=phone";
+
     @Test
     public void testJsoup(){
         Connection connect =  Jsoup.connect(ORDER_SEARCH_URL); // HttpUrlConnection
@@ -80,6 +82,26 @@ public class JsoupTest {
         ServiceExecutor.execute();
     }
 
+    @Test
+    public void testGooglePay(){
+        String proxyHost = "127.0.0.1";
+        String proxyPort = "10810";
+// 对http开启代理
+        System.setProperty("http.proxyHost", proxyHost);
+        System.setProperty("http.proxyPort", proxyPort);
+// 对https也开启代理
+        System.setProperty("https.proxyHost", proxyHost);
+        System.setProperty("https.proxyPort", proxyPort);
 
+        // Google Play挖掘与分析（软件产品、用户评论、软件代码等都可以分析
+        Connection connect =  Jsoup.connect(GOOGLE_PAY_URL);
+        try {
+            Document document = connect.get();
+            System.out.println(document.body());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 
 }

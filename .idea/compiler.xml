@@ -14,6 +14,7 @@
         <module name="nacos-spring-discorvery" />
         <module name="event-bridge" />
         <module name="tomcat-learn" />
+        <module name="spark-test" />
         <module name="grpc-client" />
         <module name="grpc-demo" />
         <module name="spring-base" />

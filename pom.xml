@@ -29,6 +29,7 @@
         <module>java-webservice</module>
         <module>java-crawler</module>
         <module>mq-practice/kafka-practice</module>
+        <module>spark-test</module>
     </modules>
     
     <properties>
