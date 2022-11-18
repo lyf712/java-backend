@@ -96,6 +96,25 @@
             <version>${hadoop-core.version}</version>
         </dependency>
 
+        <!--        Spark Streaming依赖-->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.11</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        <!--Spark Streaming整合Kafka依赖-->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka-0-10_2.11</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>compile</scope>
+        </dependency>
+
         <!--        <dependency>-->
         <!--            <groupId>com.alibaba</groupId>-->
         <!--            <artifactId>fastjson</artifactId>-->
