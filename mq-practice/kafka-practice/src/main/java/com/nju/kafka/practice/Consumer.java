@@ -31,9 +31,7 @@ import java.util.Properties;
  * @date2022/11/13
  **/
 public class Consumer {
-    private final static String TOPIC_NAME = "test2";
     private final static String CONSUMER_GROUP_NAME = "testGroup";
-    private final static String KAFKA_SERVERS_CLUSTER_STR = "localhost:9092";//集群用逗号分隔172.92.240.61
 
     public static void main(String[] args) {
 
@@ -45,7 +43,7 @@ public class Consumer {
 
         // 3.消费者对象订阅主题
         // 直接订阅主题
-        consumer.subscribe(Arrays.asList(TOPIC_NAME));
+        consumer.subscribe(Arrays.asList(SysConfigUtil.kafkaTopicConsumerName()));
 
         //4. 获取/消费消息
         while (true) {
@@ -70,7 +68,7 @@ public class Consumer {
     private static Properties makeConsumerProperties() {
         Properties props = new Properties();
         //指定连接的 kafka集群
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_SERVERS_CLUSTER_STR);
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, SysConfigUtil.kafkaUrls());
         // 消费分组名
         props.put(ConsumerConfig.GROUP_ID_CONFIG, CONSUMER_GROUP_NAME);
 
