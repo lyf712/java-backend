@@ -17,10 +17,7 @@
 package com.nju.kafka.practice;
 
 import com.alibaba.fastjson.JSON;
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.clients.producer.ProducerRecord;
-import org.apache.kafka.clients.producer.RecordMetadata;
+import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.Properties;
@@ -50,6 +47,15 @@ public class Producer {
                     , String.valueOf(message.getId()), JSON.toJSONString(message));// json串传递
             //3.3 同步方式发送消息
             Future<RecordMetadata> future = producer.send(producerRecord);
+            // 异步发送，适合大数量，无需知道返回响应情况
+            producer.send(producerRecord, new Callback() {
+                @Override
+                public void onCompletion(RecordMetadata recordMetadata, Exception e) {
+                       //recordMetadata.offset();
+                }
+            });
+
+
             RecordMetadata metadata = future.get();
             System.out.println("同步方式发送消息结果：" + "topic-" + metadata.topic() + "|partition-"
                     + metadata.partition() + "|offset-" + metadata.offset());
