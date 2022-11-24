@@ -30,6 +30,7 @@
         <module>java-crawler</module>
         <module>mq-practice/kafka-practice</module>
         <module>spark-test</module>
+        <module>java-interview-code</module>
     </modules>
     
     <properties>

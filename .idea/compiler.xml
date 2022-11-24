@@ -49,6 +49,7 @@
         <module name="nacos-spring-config" />
         <module name="boot-demo-docker" />
         <module name="daily-app-util" />
+        <module name="java-interview-code" />
         <module name="rocketmq-practice" />
         <module name="nacos-discorver-config" />
         <module name="nacos-spring-boot-discovery" />
