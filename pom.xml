@@ -31,6 +31,8 @@
         <module>mq-practice/kafka-practice</module>
         <module>spark-test</module>
         <module>java-interview-code</module>
+        <module>nacos-learns</module>
+        <module>nacos-practice/naocs-spring-boot-3.0</module>
     </modules>
     
     <properties>

@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="naocs-spring-boot-3.0" />
         <module name="alibaba-demo-order" />
         <module name="cloud-demo-discovery-dubbo-consumer" />
         <module name="cloud-analysis-auth-provider" />
@@ -20,6 +21,7 @@
         <module name="spring-base" />
         <module name="nacos-client1.x" />
         <module name="cloud-demo-discovery-dubbo-provider" />
+        <module name="nacos-learns" />
         <module name="cloud-demo-config" />
         <module name="spring-cloud-nettflix" />
         <module name="grpc-api" />

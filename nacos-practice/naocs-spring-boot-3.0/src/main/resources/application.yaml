@@ -1,0 +1,21 @@
+
+server:
+  port: 80
+
+nacos:
+  config:
+    server-addr: localhost:8848
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+  config:
+    import: nacos:nacos-config.yaml
+
+  cloud:
+    nacos:
+      config:
+        #endpoint:
+        server-addr: localhost:8848
