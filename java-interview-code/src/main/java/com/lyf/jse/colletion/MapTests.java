@@ -16,9 +16,34 @@
 
 package com.lyf.jse.colletion;
 
+import org.junit.Test;
+
+import java.util.HashMap;
+
 /**
  * @authorliyunfei
  * @date2022/11/25
  **/
 public class MapTests {
+    @Test
+    public void testHashMap(){
+        /**
+         1.基本概述：基于hash的Map接口实现，。。。
+         2.特性：kek-value键值对，非线程安全，null值。。
+         3.底层数据结构：数组+链表
+         4.操作特性：putVal
+         5.hash冲突解决的理解
+         6.ConcrrentHashMap如何保证线程安全
+
+         // 异或减少碰撞几率
+         return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+         public final int hashCode() {
+         return Objects.hashCode(key) ^ Objects.hashCode(value);
+         }
+
+         */
+
+        HashMap hashMap = new HashMap();
+    }
+
 }
