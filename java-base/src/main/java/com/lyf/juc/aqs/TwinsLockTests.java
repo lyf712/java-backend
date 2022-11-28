@@ -25,6 +25,7 @@ import java.util.concurrent.locks.Lock;
  * @authorliyunfei
  * @date2022/11/12
  **/
+//@Deprecated(since = "1")
 public class TwinsLockTests {
     @Test
     public void test(){

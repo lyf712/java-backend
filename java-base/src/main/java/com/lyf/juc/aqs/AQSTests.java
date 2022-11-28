@@ -17,6 +17,7 @@
 package com.lyf.juc.aqs;
 
 import org.junit.Test;
+import sun.misc.Unsafe;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
@@ -85,5 +86,7 @@ public class AQSTests {
 //                    compareAndSetState(available, remaining))
 //                return remaining;
 //        }
+       // Unsafe.getUnsafe();
+
     }
 }

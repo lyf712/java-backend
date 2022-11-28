@@ -18,6 +18,7 @@ package com.lyf.jse.colletion;
 
 import org.junit.Test;
 
+import java.util.BitSet;
 import java.util.HashMap;
 
 /**
@@ -45,5 +46,17 @@ public class MapTests {
 
         HashMap hashMap = new HashMap();
     }
+
+    /**
+     * 布隆过滤器 review
+     */
+    @Test
+    public void testBitMap(){
+        // boolean的数组{相对于}
+        // 结合com.google.common.hash [java-base包下引入的guava]
+        BitSet bitSet = new BitSet();
+        bitSet.set(0,false);
+    }
+
 
 }
