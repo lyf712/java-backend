@@ -54,6 +54,7 @@
         <module name="java-interview-code" />
         <module name="rocketmq-practice" />
         <module name="nacos-discorver-config" />
+        <module name="spark-learn" />
         <module name="nacos-spring-boot-discovery" />
         <module name="grpc-server" />
         <module name="cloud-demo-setinel-gateway" />
