@@ -16,7 +16,7 @@ public class DubboProviderApp {
     public static void main(String[] args) throws InterruptedException {
         //org.apache.dubbo.common.URLBuilder
         //org.apache.commons.lang3.StringUtils
-        //new EmbedZookeeper(2181, false).start();
+        new EmbedZookeeper(2181, false).start();
         SpringApplication.run(DubboProviderApp.class, args);
         //System.out.println("dubbo service started");
         //new CountDownLatch(1).await();

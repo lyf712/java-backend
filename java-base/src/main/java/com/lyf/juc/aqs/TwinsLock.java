@@ -46,6 +46,7 @@ public class TwinsLock implements Lock {
             //return super.tryAcquireShared(reduceCount);
         }
 
+        // 共享资源
         @Override
         protected boolean tryReleaseShared(int returnCount) {
             for (;;){
@@ -55,6 +56,17 @@ public class TwinsLock implements Lock {
                     return true;
             }
             // return super.tryReleaseShared(arg);
+        }
+
+        // 独占
+        @Override
+        protected boolean tryAcquire(int arg) {
+            return super.tryAcquire(arg);
+        }
+
+        @Override
+        protected boolean tryRelease(int arg) {
+            return super.tryRelease(arg);
         }
     }
 
