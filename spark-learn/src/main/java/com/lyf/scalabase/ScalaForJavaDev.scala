@@ -15,24 +15,24 @@
  */
 
 package com.lyf.scalabase
-/**
- * @authorliyunfei
- * @date2022/11/28
- * */
-object PracticeTests {
-       def main(args:Array[String]): Unit ={
-//           val service: TestService = new TestServiceImpl1()
-//           val maxVal = service.max(Array(
-//             1,34,2,7,8,10,21
-//           ))
-//           println(maxVal)
 
-           // 闭包的概念：函数内引用到函数外的值
-           var var1 = 3;
-           var fun = (i:Int) => i * var1 //
-           println(fun(2))
-           var1 = 5
-           println(fun(2))
+/**
+ * https://docs.scala-lang.org/scala3/book/scala-for-java-devs.html
+ *
+ * @authorliyunfei
+ * @date2022/11/29
+ * */
+object ScalaForJavaDev {
+       /**
+        * Unit类型，Any,AnyRef
+        */
+
+
+       /**
+        * start
+        * @param args
+        */
+       def main(args:Array[String]): Unit ={
 
        }
 }
