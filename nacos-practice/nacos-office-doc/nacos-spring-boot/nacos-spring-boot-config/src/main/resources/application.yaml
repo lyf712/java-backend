@@ -16,6 +16,6 @@
 ##      config:
 ##        import-check:
 ##          enabled: false
-#  config:
-#    import: optional:nacos:nacos-config.yaml
+##  config:
+##    import: optional:nacos:nacos-config.yaml
 #
