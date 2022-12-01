@@ -87,33 +87,41 @@ object GraphxTests {
     )
     val vertexArrBuf = new ArrayBuffer[(Long,(String,Int))]()
     // vertexArr.apply((1,("",2))
-    readMysql(spark = spark, url = "jdbc:mysql://47.98.99.88:3306/cclab", sql = "select * from user limit 100")
-      //.show()
-      .foreach(row => {
-           println(s"${row.get(0)},${row.getInt(1)},${row.getString(2)}")
-              //vertexArr.apply(row.getInt(1),(row.getString(2),1))
-              //vertexArr+= (row.getInt(1),(row.getString(2),1))
-//            val a = (row.getInt(1).toLong,(row.getString(2),1))
-//        //FIXME 加不进去？？
-//            println("a::")
-//            println(a)
+    val tmpArr = readMysql(spark = spark, url = "jdbc:mysql://47.98.99.88:3306/cclab", sql = "select * from user limit 100")
+      //.columns.foreach(e=>{println(e)})
+      .collect().map(e=> (e.getInt(1).toLong,(e.getString(2),1) ))
+      .clone();
 
-            vertexArrBuf += ((row.getInt(1).toLong,(row.getString(2),1)))
-      })
+    //.show()
+//      .foreach(row => {
+//           println(s"${row.get(0)},${row.getInt(1)},${row.getString(2)}")
+//              //vertexArr.apply(row.getInt(1),(row.getString(2),1))
+//              //vertexArr+= (row.getInt(1),(row.getString(2),1))
+////            val a = (row.getInt(1).toLong,(row.getString(2),1))
+////        //FIXME 加不进去？？ //解决：https://cloud.tencent.com/developer/ask/sof/1115340
+////            println("a::")
+////            println(a)
+//
+//            vertexArrBuf += ((row.getInt(1).toLong,(row.getString(2),1)))
+//      })
+
+
+
+    vertexArrBuf += ((3L,("test",1)))
 
     println("buffer：")
 
     vertexArrBuf.foreach(e=>{println(e)})
 
     // 构造RDD--
-    val vertexRDD: RDD[(Long, (String, Int))] = sc.parallelize(vertexArrBuf.toArray.toSeq)
+    val vertexRDD: RDD[(Long, (String, Int))] = sc.parallelize(tmpArr.seq) //
     val edgeRDD: RDD[Edge[String]] = sc.parallelize(edgeArr)
     // Graph [(attr1,attr2),desc]
     val graph: Graph[(String, Int), String] = Graph(vertexRDD, edgeRDD)
 
-//    graph.vertices.foreach(e=>{
-//       println(s"${e._1}+${e._2}")
-//    })
+    graph.vertices.foreach(e=>{
+       println(s"${e._1},${e._2}")
+    })
 
     graph
   }
