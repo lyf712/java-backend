@@ -86,4 +86,23 @@ public class ArrayProblems {
         return index+1;
     }
 
+    // 双指针--https://leetcode.cn/problems/squares-of-a-sorted-array/
+    public int[] sortedSquares(int[] nums) {
+        // 基本思路
+        // left ,right 双指针： right位置放大的值，小的值无法确定（在中间）
+        // left,right两端其中必然有一个最大值
+        int left = 0,right = nums.length-1;
+        // 内存没有最优，思考如何在同一数组操作
+        int[] rs = new int[nums.length];
+        int k = right;
+        while(left <= right){
+            if(nums[left]*nums[left]>nums[right]*nums[right]){
+                rs[k--] = nums[left]*nums[left++];
+            }else{
+                rs[k--] = nums[right]*nums[right--];
+            }
+        }
+        return rs;
+    }
+
 }
