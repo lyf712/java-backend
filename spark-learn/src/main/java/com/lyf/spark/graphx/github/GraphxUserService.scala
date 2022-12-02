@@ -15,22 +15,22 @@
  */
 
 package com.lyf.spark.graphx.github
-import org.apache.spark.sql.{DataFrame, SparkSession}
 
 /**
+ * 用户-用户关系
+ *
  * @authorliyunfei
- * @date2022/11/30
+ * @date2022/12/2
  * */
-object DbUtil {
-    val username:String = "practice"
-    val password:String = "123456"
-    def readMysql(spark: SparkSession, url: String, sql: String): DataFrame = {
-       spark.read.format("jdbc")
-         .option("driver", "com.mysql.cj.jdbc.Driver")
-         .option("user", username)
-         .option("password", password)
-         .option("url", url)
-         .option("dbtable", s"($sql) dbtable").load()
-    }
+
+class GraphxUserService extends GraphxService {
+      private val sql:String = ""
+
+      override def createGraphx(): Unit ={
+
+      }
+}
+
+object GraphxUserService {
 
 }
