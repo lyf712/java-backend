@@ -14,34 +14,25 @@
  *    limitations under the License.
  */
 
-package com.lyf.redis;
+package com.lyf.scalabase.db
 
-import org.junit.Test;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisCluster;
+import org.mongodb.scala.MongoClient
+import redis.clients.jedis.Jedis
 
 /**
- * https://github.com/redis/redis
- *
  * @authorliyunfei
- * @date2022/11/25
- **/
-public class JedisTests {
-    final String remoteIp = "47.98.99.88";
-    @Test
-    public void test(){
-        Jedis jedis = new Jedis(remoteIp,6379);
-        // redis集群--
-        //JedisCluster jedisCluster = new JedisCluster();
-        jedis.auth("123456");
-        jedis.ping("hello");
+ * @date2022/12/3
+ * */
+object RedisUtil {
+       def main(args:Array[String]): Unit ={
+           val jedis = new Jedis("**", 6379)
+           jedis.auth("**")
+           println("get graph:")
+           println(jedis.get("graph"))
 
-        jedis.set("graph","ok");
-        // base operation--
-        // value,list,set,hash,unsortset,geo,hyploglog,
-        // expire 失效 淘汰策略
-
-        //
-    }
-
+         val mongoClient = MongoClient("mongodb://admin:**@**:27017/test")
+         val database = mongoClient.getDatabase("admin")
+         database.createCollection("hello")
+         //val collection = database.getCollection("")
+       }
 }
