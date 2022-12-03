@@ -16,6 +16,9 @@
 
 package com.lyf.alg.carl.arr;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @authorliyunfei
  * @date2022/12/1
@@ -26,6 +29,8 @@ public class ArrayProblems {
      * 1.二分查找 https://leetcode.cn/problems/binary-search/
      * 2.移除元素
      * 直接覆盖删除元素，无需关注顺序性（若考虑关注顺序性呢？）
+     * 3.双指针（平方数组）
+     * 4.滑动窗口
      */
     public int search(int[] nums, int target) {
         int low =0,high=nums.length-1;
@@ -105,4 +110,114 @@ public class ArrayProblems {
         return rs;
     }
 
+    public int minSubArrayLen(int target, int[] nums) {
+        // left,right;sum(nums[left],..,nums[right]) 不够则 right++,够则left--;
+        // 结合滑动窗口——网络请求控制网络拥塞思考（控制的是接收端，发送端）
+        // 并将达标的进行 更新 len （初始值为0）
+
+        // carl
+        int left=0,right=0;
+        int rs = Integer.MAX_VALUE;
+        int sum=0;
+        while(right<nums.length){
+            sum+=nums[right];// 吸收值
+            while(sum>=target){// 只需要处理溢出情况，即减少窗口来满足下次吸收
+                if(right-left+1<rs)
+                    rs = right-left+1;
+                sum-=nums[left++];// 窗口减少，
+            }
+            right++;
+        }
+        return rs==Integer.MAX_VALUE?0:rs;
+
+
+        // int left=0,right=0;
+        // int rs = Integer.MAX_VALUE;
+        // int sum=0;
+        // while(right<nums.length){
+        //      sum+=nums[right];// 积累该窗口右边的值[先加一个值]
+        //      if(sum<target){
+        //          // 一次只考虑 加一个窗口OR减一个窗口即可，无需像以下那样考虑--
+
+        //          right++;// 不满足，则增大窗口即可
+        //      }else{// 满足，考虑是否存在更新
+        //          int size = right-left+1;
+        //          if(size<rs)
+        //              rs = size;
+        //          //left++;// 减少窗口，因为已经达标，需要移除最早的，容纳新的值进来
+        //          sum -= nums[left++];
+        //          sum -= nums[right];
+        //      }
+        // }
+        // return rs==Integer.MAX_VALUE?0:rs;
+
+
+        //    int left=0,right=0;
+        //    int rs = Integer.MAX_VALUE;
+        //    int sum = 0;
+        //    while(right<nums.length){
+        //        if(sum<target){
+        //            while(right<nums.length &&  (sum+=nums[right])<target)
+        //                right++;// 移动右边指针
+        //        }else{
+        //            while(left<=right && (sum-=nums[left]) >= target)
+        //                left++;
+        //            if(right<left)
+        //                right = left;
+        //        }
+
+        //         if(right-left+1<rs)
+        //             rs = right-left+1;
+        //    }
+        //    return rs==Integer.MAX_VALUE?0:rs;
+    }
+
+
+    public int totalFruit(int[] fruits) {
+        // 滑动窗口变式-- sum → 种类数（引起发生改变）
+        // 已知只有两个篮子，，设置一个 flag[] = new int[2];记录已有的即可，未记录的-1 （种类 0+）
+        int left = 0,right = 0;
+        int rs = 0;// 最大数目,最少也可以 Min(fruits.length,2)
+        //    int[] record = new int[2];// 考虑集合代替
+        //    Arrays.fill(record,-1);// 未记录
+        // 无法保证窗口减少--
+        Map<Integer,Integer> record = new HashMap<>(2);
+
+        while(right<fruits.length){
+            // 处理 record情况
+            // 消费 new fruit
+            Integer newFruit = fruits[right];
+            // 若包含该类水果，直接加入；不包含，则考虑 缩小窗口或者 占用未-1的篮子
+            Integer num = record.get(newFruit);
+            if(num!=null){//包括该水果,
+                record.put(newFruit,num+1);// 多一个
+                if(right-left+1>rs)
+                    rs = right-left+1;// 增大考虑比较更新
+            }else{//
+                // Integer leftNum = record.get(fruits[left]);
+                // 先判断篮子种类数是否够用
+                if(record.size()==2){
+                    // 此种情况，加入会影响，溢出，则考虑缩小窗口
+                    while(record.size()==2)
+                    {
+                        Integer leftVal = fruits[left];
+                        Integer leftNum = record.get(leftVal);
+                        if(leftNum-1==0){
+                            record.remove(leftVal);
+                        }else{
+                            record.put(leftVal,leftNum-1);
+                        }
+                        left++;
+                    }
+                    record.put(newFruit,1);
+                }else{// 该种情况，考虑和num!=null合并，该种情况则是num==0的特殊情况
+                    record.put(newFruit,1);
+                    if(right-left+1>rs)
+                        rs = right-left+1;// 增大考虑比较更新
+                }
+            }
+            right++;
+        }
+        return rs;
+    }
 }
