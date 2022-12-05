@@ -18,11 +18,14 @@ package com.lyf.alg.carl.link;
 
 import org.junit.Test;
 
+import java.util.LinkedList;
+
 /**
  * @authorliyunfei
  * @date2022/12/5
  **/
 public class LinkTests {
+
     @Test
     public void test(){
         MyLinkedList linkedList = new MyLinkedList();
