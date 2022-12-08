@@ -14,32 +14,30 @@
  *    limitations under the License.
  */
 
-package com.lyf.alg.carl.link;
+package com.lyf.alg.carl.stackqueue;
 
-import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Stack;
 
 /**
  * @authorliyunfei
- * @date2022/12/5
+ * @date2022/12/8
  **/
-public class LinkTests {
-
-    @Test
-    public void test(){
-        MyLinkedList linkedList = new MyLinkedList();
-        linkedList.addAtHead(1);
-        linkedList.addAtTail(3);
-        linkedList.addAtIndex(1,2);   //链表变为1-> 2-> 3
-        linkedList.get(1);            //返回2
-        linkedList.deleteAtIndex(1);  //现在链表是1-> 3
-        linkedList.get(1);            //返回3
-
-        //LinkedList
-        //ArrayList
-        //List
+public class BrackeValid {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        for(int i=0;i<s.length();i++){
+            Character ch = s.charAt(i);
+            if(stack.isEmpty()){
+                stack.push(ch);
+            }else{
+                Character ch0 = stack.peek();
+                if( (ch0=='('&&ch==')')||(ch0=='{'&&ch=='}')||(ch0=='['&&ch==']')   ){
+                    stack.pop();
+                }else{
+                    stack.push(ch);
+                }
+            }
+        }
+        return stack.isEmpty();
     }
 }

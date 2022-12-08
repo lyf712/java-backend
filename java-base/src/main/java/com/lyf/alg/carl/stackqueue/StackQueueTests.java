@@ -14,32 +14,37 @@
  *    limitations under the License.
  */
 
-package com.lyf.alg.carl.link;
+package com.lyf.alg.carl.stackqueue;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
+import java.util.ArrayDeque;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
 
 /**
  * @authorliyunfei
- * @date2022/12/5
+ * @date2022/12/8
  **/
-public class LinkTests {
-
+public class StackQueueTests {
     @Test
-    public void test(){
-        MyLinkedList linkedList = new MyLinkedList();
-        linkedList.addAtHead(1);
-        linkedList.addAtTail(3);
-        linkedList.addAtIndex(1,2);   //链表变为1-> 2-> 3
-        linkedList.get(1);            //返回2
-        linkedList.deleteAtIndex(1);  //现在链表是1-> 3
-        linkedList.get(1);            //返回3
+    public void testApi(){
+        Stack<Integer> stack = new Stack<>();
+        Queue<Integer> queue = new ArrayDeque<>();
+        Queue<Integer> queue1 = new LinkedList<>();
+        stack.peek();
+        queue.peek();
 
-        //LinkedList
-        //ArrayList
-        //List
+        stack.pop();
+        queue.poll();
+
+        stack.push(1);
+        queue.offer(1);
+    }
+    @Test
+    public void testMyQueue(){
+        MyQueue myQueue = new MyQueue();
+
     }
 }
