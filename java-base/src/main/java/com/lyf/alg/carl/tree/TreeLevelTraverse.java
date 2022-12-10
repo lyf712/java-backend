@@ -20,13 +20,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Collections;
 
 /**
  * @authorliyunfei
  * @date2022/12/9
  **/
 public class TreeLevelTraverse {
-    private class TreeNode{int val;TreeNode left,right;}
+    static class TreeNode{int val;TreeNode left,right;}
 
     // 双队列捣鼓
     public List<List<Integer>> levelOrder(TreeNode root) {
@@ -127,6 +128,7 @@ public class TreeLevelTraverse {
         return rs;
     }
     void recursion(TreeNode root,int deep){
+
         if(root==null) return;
         //deep++;
         if(rs.size()<deep){

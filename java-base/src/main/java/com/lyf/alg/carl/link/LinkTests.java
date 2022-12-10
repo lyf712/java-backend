@@ -21,7 +21,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
+import java.util.Collections;
 /**
  * @authorliyunfei
  * @date2022/12/5
@@ -38,6 +38,15 @@ public class LinkTests {
         linkedList.deleteAtIndex(1);  //现在链表是1-> 3
         linkedList.get(1);            //返回3
 
+        LinkedList<Integer> list = new LinkedList<>();
+        list.addFirst(1);
+        //return (List<T>) Collections.unmodifiableList(new ArrayList<>(Arrays.asList(this.toArray())));
+        list.stream().toList();
+        Collections.synchronizedList(list);//unmodifiableList(list);
+
+        List<Integer> list1 = new LinkedList<>(list);
+
+        //new LinkedList<>().addFirst();
         //LinkedList
         //ArrayList
         //List
