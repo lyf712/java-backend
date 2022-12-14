@@ -51,4 +51,12 @@ public class LinkTests {
         //ArrayList
         //List
     }
+
+    @Test
+    public void testCopy(){
+        //Collections.unmodifiableList()
+        //Collections.sort();
+       // Collections.synchronizedList()
+
+    }
 }
