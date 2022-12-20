@@ -59,4 +59,12 @@ public class LinkTests {
        // Collections.synchronizedList()
 
     }
+
+    @Test
+    public void testClear(){
+        new LinkedList<>().clear();
+
+        //new LinkedList<>().removeIf()
+    }
+
 }

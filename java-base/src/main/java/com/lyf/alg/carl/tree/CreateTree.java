@@ -156,4 +156,36 @@ public class CreateTree {
         return -1;
     }
 
+    // 合并二叉树
+    public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
+        // 合并到root1
+        if(root1==null)return root2;
+        mergeHelper(root1,root2);
+        return root1;
+    }
+    void mergeHelper(TreeNode root1, TreeNode root2){
+        if(root1!=null||root2!=null){
+            if(root1==null) root1 = new TreeNode(0);
+            if(root2==null) root2 = new TreeNode(0);
+            root1.val = root1.val+root2.val;
+            if(root1.left==null&&root2.left!=null) root1.left = new TreeNode(0);
+            if(root1.right==null&&root2.right!=null) root1.right = new TreeNode(0);
+
+            mergeHelper(root1.left,root2.left);
+            mergeHelper(root1.right,root2.right);
+        }
+        //  if(root1==null&&root2==null){return;}
+        //  int newVal = 0;
+        //  if(root1==null){
+        //      root1 = new TreeNode(0);
+        //  }
+        //  if(root2==null){ // 改变了树二的结构，若不想改变，则可复制一个临时树
+        //      root2 = new TreeNode(0);
+        //  }
+        //  newVal = root1.val + root2.val;
+        //  root1.val = newVal;
+        //  mergeHelper(root1.left,root2.left);
+        //  mergeHelper(root1.right,root2.right);
+    }
+
 }
