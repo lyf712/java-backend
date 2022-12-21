@@ -23,6 +23,7 @@ public class UrlConnectionTests {
     public void testApplicationProtUrl() {
         URL url = null;
         InputStream inputStream = null;
+
         try {
             url = new URL("http://www.baidu.com");
             URLConnection connection = url.openConnection();
