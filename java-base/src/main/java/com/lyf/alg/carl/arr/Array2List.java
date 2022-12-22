@@ -14,31 +14,21 @@
  *    limitations under the License.
  */
 
-package com.lyf.alg.leetcode.math;
+package com.lyf.alg.carl.arr;
 
 import org.junit.Test;
 
-import java.util.LinkedList;
-
 /**
  * @authorliyunfei
- * @date2022/12/21
+ * @date2022/12/22
  **/
-public class MathApiTests {
-    @Test
-    public void testApi(){
-        //Math.sqrt()
-        //new LinkedList<>().g
-
-        System.out.println((0.1+0.2)==0.3);
-        System.out.println((0.1F+0.2F)==0.3F);
-        System.out.println((1+2)==3);
-        float i = 0.1F;
-        float j = 0.2F;
-        if(i+j==0.3F){
-            System.out.println("yes");
-        }else{
-            System.out.println("no");
-        }
-    }
+public class Array2List {
+      @Test
+      public void test(){
+          char[][] chars = new char[2][2];
+          chars[0][0]='a';
+          chars[0][1]='b';
+          // return new String(data);
+          String str = String.copyValueOf(chars[0]);
+      }
 }
