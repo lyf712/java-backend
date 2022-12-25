@@ -188,4 +188,18 @@ public class CreateTree {
         //  mergeHelper(root1.right,root2.right);
     }
 
+    public TreeNode sortedArrayToBST(int[] nums) {
+        // 二分法
+        return binaryConstructBST(nums,0,nums.length);
+    }
+    private TreeNode binaryConstructBST(int[]nums,int low,int high){
+        if(low>high) return null;
+        int mid = (high+low) / 2;
+        if(mid>=nums.length) return null;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = binaryConstructBST(nums,low,mid-1);
+        root.right = binaryConstructBST(nums,mid+1,high);
+        return root;
+    }
+
 }
