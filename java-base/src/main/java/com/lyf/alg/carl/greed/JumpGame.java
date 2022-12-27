@@ -16,6 +16,8 @@
 
 package com.lyf.alg.carl.greed;
 
+import java.util.Arrays;
+
 /**
  * @authorliyunfei
  * @date2022/12/22
@@ -51,5 +53,38 @@ public class JumpGame {
             }
         }
         return false;
+    }
+
+
+    public int jumpII(int[] nums) {
+        //record [MAX,MAX,MAX,MAX,MAX]
+        //0 - - - -
+        //0 1 1 - -
+        //0 1 1 1 2
+        int[]record = new int[nums.length];
+        Arrays.fill(record,Integer.MAX_VALUE);
+        record[0] = 0;
+        for(int i=0;i<nums.length-1;i++){
+            int step = nums[i];
+            for(int j=1;j<=step;j++){
+                int nextIndex = i+j;
+                if(nextIndex>nums.length-1) break;
+                record[nextIndex] = Math.min(record[i]+1,record[nextIndex]);
+            }
+        }
+        return record[nums.length-1];
+    }
+    public int jumpII2(int[] nums) {
+        int rs = 0;
+        int end = 0,nextEnd = 0;
+        for(int i=0;i<=end && end<nums.length-1;i++){
+            nextEnd = Math.max(nextEnd,i+nums[i]);// 保证最远的可达距离
+            if(i==end){
+                // 已走完该次最大可达的距离，需要继续更新下次可达；在该范围内只需跳跃一次，更新至下一次可达则需要加步数
+                end = nextEnd;
+                rs++;
+            }
+        }
+        return rs;
     }
 }
