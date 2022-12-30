@@ -69,4 +69,49 @@ public class RemoveN {
 
         // return pre.next;
     }
+
+
+    // 删除重复元素
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode cur = head;
+        if(cur==null) return null;
+        ListNode next = cur.next;
+
+        while(next!=null){
+            if(cur.val==next.val){
+                cur.next = next.next;//删除
+                next = cur.next;
+            }else{
+                cur = next;
+                next = next.next;
+            }
+        }
+        return head;
+    }
+
+    public ListNode deleteDuplicatesII(ListNode head) {
+        // 在I的基础上 ，添加pre的指针
+        if(head==null) return null;
+
+        ListNode pHead = new ListNode(0);
+        pHead.next = head;
+
+        ListNode pre = pHead,cur = head,next=cur.next;
+        while(next!=null){
+            if(cur.val==next.val){
+                while(next!=null&&next.val==cur.val) next = next.next;
+                cur = next;
+                pre.next=cur;
+                if(next!=null){
+                    next = next.next;
+                }
+            }else{
+                pre = cur;
+                cur = next;
+                next = next.next;
+            }
+        }
+
+        return pHead.next;
+    }
 }

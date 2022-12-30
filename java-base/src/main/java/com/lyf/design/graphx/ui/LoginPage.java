@@ -14,18 +14,14 @@
  *    limitations under the License.
  */
 
-package com.lyf.design.graphx;
+package com.lyf.design.graphx.ui;
 
-import javax.swing.*;
 import java.awt.*;
 
 /**
  * @authorliyunfei
- * @date2022/11/30
+ * @date2022/12/30
  **/
-public class SwingTests {
-//    public static void main(String[] args) {
-//        //JFrame
-//        //Graphics
-//    }
+public class LoginPage extends Frame {
+
 }
