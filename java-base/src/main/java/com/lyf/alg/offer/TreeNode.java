@@ -14,24 +14,17 @@
  *    limitations under the License.
  */
 
-package com.lyf.alg.carl;
-
-import org.junit.Test;
-
-import java.util.Arrays;
+package com.lyf.alg.offer;
 
 /**
  * @authorliyunfei
- * @date2022/12/26
+ * @date2023/1/5
  **/
-public class StreamTests {
-    @Test
-    public void arrStream(){
-         int [] nums = new int[10];
-         Arrays.stream(nums).sum();
-        // Stream.of(new int[]{1,2,4}).min((o1, o2) -> {return o1.length-o2.length});
-        int[] arr = new int[10];
-        Arrays.stream(arr).min().getAsInt();
-        //Math.pow()
+public class TreeNode {
+       int val;
+       TreeNode left,right;
+
+    public TreeNode(int val) {
+        this.val = val;
     }
 }

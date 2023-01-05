@@ -14,24 +14,26 @@
  *    limitations under the License.
  */
 
-package com.lyf.alg.carl;
-
-import org.junit.Test;
-
-import java.util.Arrays;
+package com.lyf.alg.offer;
 
 /**
  * @authorliyunfei
- * @date2022/12/26
+ * @date2023/1/5
  **/
-public class StreamTests {
-    @Test
-    public void arrStream(){
-         int [] nums = new int[10];
-         Arrays.stream(nums).sum();
-        // Stream.of(new int[]{1,2,4}).min((o1, o2) -> {return o1.length-o2.length});
-        int[] arr = new int[10];
-        Arrays.stream(arr).min().getAsInt();
-        //Math.pow()
+public class OfferVII39 {
+    public int majorityElement(int[] nums) {
+        // 投票计数
+        int x = 0,votes=0;
+        for(int num:nums){
+            if(votes==0) x = num;// 投票为0了，则可重新开始投票，后面的数任保持--
+
+            if(x==num){//是过半数则投票，否则--
+                votes++;
+            }else{
+                votes--;
+            }
+        }
+        // ---若不说一定存在，需要去验证
+        return x;
     }
 }
