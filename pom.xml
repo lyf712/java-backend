@@ -35,6 +35,7 @@
         <module>nacos-practice/naocs-spring-boot-3.0</module>
         <module>spark-learn</module>
         <module>cs-base-concept</module>
+        <module>java8</module>
     </modules>
     
     <properties>
