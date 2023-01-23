@@ -14,34 +14,17 @@
  *    limitations under the License.
  */
 
-package com.lyf.jse.lang;
+package com.lyf.javaguide;
 
 import org.junit.Test;
-
-import java.util.Objects;
+import sun.misc.Unsafe;
 
 /**
  * @author liyunfei
  **/
-public class HashCodeTests {
+public class UnSafeTests {
     @Test
     public void test(){
-        String hello = "hello";
-        System.out.println(Objects.hashCode(hello));
-        System.out.println(hello.hashCode());
-
-        //Integer.toBinaryString()
-        //Long.toBinaryString()
-        char[]chars = new char[2];
-        System.out.println(Integer.toHexString(System.identityHashCode(chars)));
-        for(int i=0;i<2;i++){
-            chars[i]='o';
-        }
-        char[]chars1 = new char[2];
-        System.out.println(Integer.toHexString(System.identityHashCode(chars1)));
-        String s = "123";
-        //s.equals()
-        Object o = new Object();
-        //o.equals();
+        //Unsafe
     }
 }

@@ -14,34 +14,37 @@
  *    limitations under the License.
  */
 
-package com.lyf.jse.lang;
+package com.lyf.javaguide;
 
 import org.junit.Test;
 
-import java.util.Objects;
+import java.util.Scanner;
 
 /**
  * @author liyunfei
  **/
-public class HashCodeTests {
+//@Sfj4
+public class ExceptionTests {
     @Test
-    public void test(){
-        String hello = "hello";
-        System.out.println(Objects.hashCode(hello));
-        System.out.println(hello.hashCode());
-
-        //Integer.toBinaryString()
-        //Long.toBinaryString()
-        char[]chars = new char[2];
-        System.out.println(Integer.toHexString(System.identityHashCode(chars)));
-        for(int i=0;i<2;i++){
-            chars[i]='o';
+    public void testBase(){
+        try {
+            System.out.println("ok");
+            throw new UnsupportedOperationException("");
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            //return;
+            //.close
         }
-        char[]chars1 = new char[2];
-        System.out.println(Integer.toHexString(System.identityHashCode(chars1)));
-        String s = "123";
-        //s.equals()
-        Object o = new Object();
-        //o.equals();
+    }
+    @Test
+    public void testTryRes(){
+        try (Scanner scanner = new Scanner("")){
+            while (scanner.hasNext()){
+
+            }
+        }catch (Exception e){
+
+        }
     }
 }

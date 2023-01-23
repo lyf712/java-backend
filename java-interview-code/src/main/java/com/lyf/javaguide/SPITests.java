@@ -14,34 +14,35 @@
  *    limitations under the License.
  */
 
-package com.lyf.jse.lang;
+package com.lyf.javaguide;
 
 import org.junit.Test;
 
-import java.util.Objects;
+import java.util.ServiceLoader;
 
 /**
  * @author liyunfei
  **/
-public class HashCodeTests {
+public class SPITests {
+    // 调用方设计标准，具体实现交给具体厂商去实现
+    interface SelfProctal{
+        void work();
+    }
+
+    //
+    class HuaweiSelfProctalImpl implements SelfProctal{
+        @Override
+        public void work() {
+            System.out.println("hello,i am huawei..");
+        }
+    }
     @Test
     public void test(){
-        String hello = "hello";
-        System.out.println(Objects.hashCode(hello));
-        System.out.println(hello.hashCode());
-
-        //Integer.toBinaryString()
-        //Long.toBinaryString()
-        char[]chars = new char[2];
-        System.out.println(Integer.toHexString(System.identityHashCode(chars)));
-        for(int i=0;i<2;i++){
-            chars[i]='o';
-        }
-        char[]chars1 = new char[2];
-        System.out.println(Integer.toHexString(System.identityHashCode(chars1)));
-        String s = "123";
-        //s.equals()
-        Object o = new Object();
-        //o.equals();
+        ServiceLoader<SelfProctal> serviceLoader = ServiceLoader.load(SelfProctal.class);
+        System.out.println(serviceLoader.stream().count());
+        serviceLoader.forEach(each->{
+            System.out.println(each);
+            each.work();
+        });
     }
 }
