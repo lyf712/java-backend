@@ -36,4 +36,9 @@ public class LockTest {
         System.out.println(ClassLayout.parseClass(LockTest.class).toPrintable());
         //longAdder.sum();
     }
+    // 锁升级：无 状态->偏向锁->轻量级锁->重量锁
+    @Test
+    public void testSynchronizedOpt(){
+
+    }
 }
