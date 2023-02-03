@@ -1,5 +1,6 @@
 package com.lyf.ioc;
 
+import com.lyf.ioc.bean.UserService;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -19,6 +20,8 @@ public class BeanTests {
         ApplicationContext applicationContext1 = new AnnotationConfigApplicationContext();
         ApplicationContext applicationContext2 = new FileSystemXmlApplicationContext();
         BeanFactory beanFactory = new ClassPathXmlApplicationContext();
+        //applicationContext1.getBean(UserService.class);
+        applicationContext1.getBean("userService");
     }
     
     @Test

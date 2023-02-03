@@ -14,35 +14,22 @@
  *    limitations under the License.
  */
 
-package com.lyf.ioc.bean;
+package com.lyf.iocaop.aop;
 
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 /**
- * bean的构造过程：
- * 无参构造、普通对象 -> 依赖注入- 初始化前 -> 初始化 -> 初始化后（AOP） 代理对象 ->
- *
  * @author liyunfei
  **/
+@Aspect
 @Component
-public class UserService implements InitializingBean {
-    @Autowired
-    User user;
-
-    // 1.多个构造函数的情况考虑（构造判断选择）
-    // 2.循环依赖的问题考虑
-    // 3.单例bean的理解（bean对象的注入方式 @bean,@compoent）
-
-    //@PostConstruct
-    void beforeInit(){
-
-    }
-
-    // 初始化对象
-    @Override
-    public void afterPropertiesSet() throws Exception {
-
+public class TestAspect {
+    static final String POINTCUT_TEST = "execution(public void com.lyf.iocaop.bean.UserService.test())";
+    @Before(POINTCUT_TEST)
+    public void execute(){
+        System.out.println("ok");
     }
 }
