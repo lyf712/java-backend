@@ -36,6 +36,9 @@
         <module>spark-learn</module>
         <module>cs-base-concept</module>
         <module>java8</module>
+        <module>mock-spring-boot</module>
+        <module>mock-spring-boot/my-spring-boot</module>
+        <module>mock-spring-boot/service-user</module>
     </modules>
     
     <properties>

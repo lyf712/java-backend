@@ -28,6 +28,7 @@
         <module name="default-webhook" />
         <module name="cloud-stream-rocketmq-kafka" />
         <module name="base-network" />
+        <module name="my-spring-boot" />
         <module name="nacos-spring-boot-config" />
         <module name="simple-demo" />
         <module name="spring-boot" />
@@ -51,11 +52,14 @@
         <module name="spring-boot-initilzar" />
         <module name="nacos-spring-config" />
         <module name="boot-demo-docker" />
+        <module name="java8" />
+        <module name="service-user" />
         <module name="daily-app-util" />
         <module name="java-interview-code" />
         <module name="rocketmq-practice" />
         <module name="nacos-discorver-config" />
         <module name="spark-learn" />
+        <module name="mock-spring-boot" />
         <module name="nacos-spring-boot-discovery" />
         <module name="grpc-server" />
         <module name="cloud-demo-setinel-gateway" />
