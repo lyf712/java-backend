@@ -14,25 +14,14 @@
  *    limitations under the License.
  */
 
-package com.lyf.juc;
-
-import org.junit.Test;
-
-import java.util.concurrent.locks.ReentrantLock;
+package com.lyf.jvm.gc;
 
 /**
  * @author liyunfei
  **/
-public class AQSTest {
-//    private final Object o;
-//
-//    public AQSTest(Object o) {
-//        this.o = o;
-//    }
-
-    @Test
-    public void test(){
-       // ReentrantLock
-       // ReentrantLock
+public class GCCollectorTest {
+    public static void main(String[] args) {
+        //-XX:UseSerialGC
+        //-XX:UseParNewGC
     }
 }
