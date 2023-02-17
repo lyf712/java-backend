@@ -20,6 +20,8 @@ import org.junit.Test;
 
 import java.util.BitSet;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @authorliyunfei
@@ -45,6 +47,7 @@ public class MapTests {
          */
 
         HashMap hashMap = new HashMap();
+       // new ConcurrentHashMap<>()
     }
 
     /**
@@ -58,5 +61,28 @@ public class MapTests {
         bitSet.set(0,false);
     }
 
+    @Test
+    public void test(){
+        int[]arr={1};
+        System.out.println(subarraySum(arr,0));
+        // "hello".contains()
+        //"hello".contains();
+    }
+
+    public int subarraySum(int[] nums, int k) {
+        int preSum=0;
+        int count = 0;
+        Map<Integer,Integer> map = new HashMap<>(nums.length);
+        map.put(0,1);
+        for(int i=0;i<nums.length;i++){
+            preSum+=nums[i];
+            int target = preSum - k; // preSumi - preSumi = 子序列
+            if(map.get(target)!=null){
+                count++;
+            }
+            map.put(preSum,map.getOrDefault(preSum,0)+1);
+        }
+        return count;
+    }
 
 }
