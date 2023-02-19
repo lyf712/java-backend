@@ -20,7 +20,13 @@ package com.lyf.datastructurealg.hot100;
  * @author liyunfei
  **/
 public class TreeProlem {
-    class TreeNode{TreeNode left,right;}
+    class TreeNode{
+        int val;TreeNode left,right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
     int max = Integer.MIN_VALUE;
     public int diameterOfBinaryTree(TreeNode root) {
         //    if(root==null || root.left==null && root.right==null){
@@ -51,4 +57,36 @@ public class TreeProlem {
         }
         return Math.max(left+1,right+1);
     }
+
+    public static void main(String[] args) {
+        int[]pre = {1,2,3};
+        int[]in = {2,3,1};
+        new TreeProlem().buildTree(pre,in);
+    }
+
+    public  TreeNode buildTree(int[] preorder, int[] inorder) {
+        return build(preorder,inorder,0,0,inorder.length-1);
+    }
+
+    private TreeNode build(int[] preorder, int[] inorder, int index, int left, int right){// 先序的指标，中序的左右边界
+        if(index>=preorder.length || left>right){
+            return null;
+        }
+        int rootVal = preorder[index];
+        TreeNode root = new TreeNode(rootVal);
+        int mid = -1;
+        for(int i=left;i<=right;i++){
+            if(inorder[i]==rootVal){
+                mid = i;
+                break;
+            }
+        }
+        TreeNode leftNode = build(preorder,inorder,index+1,left,mid-1);
+        TreeNode rightNode = build(preorder,inorder,mid+1,mid+1,right);
+        root.left = leftNode;
+        root.right = rightNode;
+        return root;
+    }
+
+
 }
