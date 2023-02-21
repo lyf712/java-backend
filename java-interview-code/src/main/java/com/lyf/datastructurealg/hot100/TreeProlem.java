@@ -16,6 +16,9 @@
 
 package com.lyf.datastructurealg.hot100;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author liyunfei
  **/
@@ -64,29 +67,65 @@ public class TreeProlem {
         new TreeProlem().buildTree(pre,in);
     }
 
-    public  TreeNode buildTree(int[] preorder, int[] inorder) {
-        return build(preorder,inorder,0,0,inorder.length-1);
-    }
+//    public  TreeNode buildTree(int[] preorder, int[] inorder) {
+//        return build(preorder,inorder,0,0,inorder.length-1);
+//    }
+//
+//    private TreeNode build(int[] preorder, int[] inorder, int index, int left, int right){// 先序的指标，中序的左右边界
+//        if(index>=preorder.length || left>right){
+//            return null;
+//        }
+//        int rootVal = preorder[index];
+//        TreeNode root = new TreeNode(rootVal);
+//        int mid = -1;
+//        for(int i=left;i<=right;i++){
+//            if(inorder[i]==rootVal){
+//                mid = i;
+//                break;
+//            }
+//        }
+//        TreeNode leftNode = build(preorder,inorder,index+1,left,mid-1);
+//        TreeNode rightNode = build(preorder,inorder,mid+1,mid+1,right);
+//        root.left = leftNode;
+//        root.right = rightNode;
+//        return root;
+//    }
 
-    private TreeNode build(int[] preorder, int[] inorder, int index, int left, int right){// 先序的指标，中序的左右边界
-        if(index>=preorder.length || left>right){
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        map = new HashMap<>();
+        for(int i=0;i<inorder.length;i++){
+            map.put(inorder[i],i);
+        }
+        return build(preorder,inorder,0,preorder.length-1);
+    }
+    private int index =0;
+    private Map<Integer,Integer> map;
+    private TreeNode build(int[]preorder,int[]inorder,int left,int right){
+        if(left>right){
             return null;
+        }else if(left==right){
+            index++;
+            return new TreeNode(inorder[left]);
         }
-        int rootVal = preorder[index];
-        TreeNode root = new TreeNode(rootVal);
-        int mid = -1;
-        for(int i=left;i<=right;i++){
-            if(inorder[i]==rootVal){
-                mid = i;
-                break;
-            }
-        }
-        TreeNode leftNode = build(preorder,inorder,index+1,left,mid-1);
-        TreeNode rightNode = build(preorder,inorder,mid+1,mid+1,right);
-        root.left = leftNode;
-        root.right = rightNode;
+
+        int mid = map.get(preorder[index]);
+        TreeNode root = new TreeNode(inorder[mid]);
+        index++;
+        TreeNode leftTree = build(preorder,inorder,left,mid-1);
+        TreeNode rightTree = build(preorder,inorder,mid+1,right);
+        root.left = leftTree;
+        root.right = rightTree;
         return root;
     }
 
-
+    int pre =0;
+    public TreeNode bstToGst(TreeNode root) {
+        if(root!=null){
+            bstToGst(root.right);
+            root.val+=pre;
+            pre=root.val;
+            bstToGst(root.left);
+        }
+        return root;
+    }
 }
