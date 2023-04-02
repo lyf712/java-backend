@@ -14,22 +14,19 @@
  *    limitations under the License.
  */
 
-package org.example.user;
+package com.lyf.jdksource;
 
-import org.example.springboot.MySpringApplication;
-import org.example.springboot.MySpringBootApplication;
-import org.example.springboot.WebServerAutoConfig;
-import org.springframework.context.annotation.Import;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Hello world!
- *
- */
-@MySpringBootApplication
-@Import(WebServerAutoConfig.class)
-public class App {
-    public static void main( String[] args ) {
-        //System.out.println( "Hello World!" );
-        MySpringApplication.run(App.class,args);
+ * @author liyunfei
+ **/
+public class SelfHashMap {
+    public static void main(String[] args) {
+        // new HashMap<>()
+        // new ConcurrentHashMap<>()
+       // new Hashtable<>()
     }
 }

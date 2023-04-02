@@ -14,22 +14,30 @@
  *    limitations under the License.
  */
 
-package org.example.user;
+package com.lyf.jvm.jmm;
 
-import org.example.springboot.MySpringApplication;
-import org.example.springboot.MySpringBootApplication;
-import org.example.springboot.WebServerAutoConfig;
-import org.springframework.context.annotation.Import;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 /**
- * Hello world!
- *
- */
-@MySpringBootApplication
-@Import(WebServerAutoConfig.class)
-public class App {
-    public static void main( String[] args ) {
-        //System.out.println( "Hello World!" );
-        MySpringApplication.run(App.class,args);
+ * @author liyunfei
+ **/
+class TestThread extends Thread{
+
+}
+public class SignalTest {
+    public static void main(String[] args) throws InterruptedException {
+        new Thread(()->{
+            final int len = 10;
+            int[]arr = new int[len];
+            for (int i=0;i<=len;i++){
+                arr[i] = new Random().nextInt();
+            }
+
+        }).start();
+        for(;;){
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("main exec");
+        }
     }
 }

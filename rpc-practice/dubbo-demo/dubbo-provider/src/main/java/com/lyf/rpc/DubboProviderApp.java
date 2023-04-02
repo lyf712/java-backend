@@ -12,7 +12,7 @@ import java.util.concurrent.CountDownLatch;
 @EnableDubbo
 @SpringBootApplication
 public class DubboProviderApp {
-    
+
     public static void main(String[] args) throws InterruptedException {
         //org.apache.dubbo.common.URLBuilder
         //org.apache.commons.lang3.StringUtils

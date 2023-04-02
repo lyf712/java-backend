@@ -14,11 +14,15 @@
  *    limitations under the License.
  */
 
-package com.lyf.jvm;
+package com.lyf.jdksource;
+
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * @authorliyunfei
- * @date2022/12/26
+ * @author liyunfei
  **/
-public class MemoryArrange {
+public class SelfThreadPool {
+    public static void main(String[] args) {
+        // new ThreadPoolExecutor()
+    }
 }

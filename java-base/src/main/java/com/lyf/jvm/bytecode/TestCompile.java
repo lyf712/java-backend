@@ -14,22 +14,14 @@
  *    limitations under the License.
  */
 
-package org.example.user;
-
-import org.example.springboot.MySpringApplication;
-import org.example.springboot.MySpringBootApplication;
-import org.example.springboot.WebServerAutoConfig;
-import org.springframework.context.annotation.Import;
+package com.lyf.jvm.bytecode;
 
 /**
- * Hello world!
- *
+ * @author liyunfei
  */
-@MySpringBootApplication
-@Import(WebServerAutoConfig.class)
-public class App {
-    public static void main( String[] args ) {
-        //System.out.println( "Hello World!" );
-        MySpringApplication.run(App.class,args);
+public class TestCompile {
+    
+    public static void main(String[] args) {
+        System.out.println("hello");
     }
 }

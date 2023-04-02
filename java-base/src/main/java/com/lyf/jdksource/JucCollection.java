@@ -14,22 +14,26 @@
  *    limitations under the License.
  */
 
-package org.example.user;
+package com.lyf.jdksource;
 
-import org.example.springboot.MySpringApplication;
-import org.example.springboot.MySpringBootApplication;
-import org.example.springboot.WebServerAutoConfig;
-import org.springframework.context.annotation.Import;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 /**
- * Hello world!
- *
- */
-@MySpringBootApplication
-@Import(WebServerAutoConfig.class)
-public class App {
-    public static void main( String[] args ) {
-        //System.out.println( "Hello World!" );
-        MySpringApplication.run(App.class,args);
+ * @author liyunfei
+ **/
+public class JucCollection {
+    public static void main(String[] args) {
+        // ArrayBlockingQueue
+        ///System.out.println(args[0]);
+        //System.out.println(System.getProperty("testArg"));
+        for(;;){
+            System.out.println(System.getProperty("testArg"));
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

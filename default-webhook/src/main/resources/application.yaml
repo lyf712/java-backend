@@ -1,2 +1,12 @@
 server:
   port: 8080
+
+#  ## 做限流处理，根据CPU、IO的情况进行合适的配置
+#  tomcat:
+#    ## 请求连接的数量限制
+#    accept-count:
+#    ## Tomcat线程数
+#    threads:
+#      max: 200
+#    ## 最大连接数
+#    max-connections: 8912
