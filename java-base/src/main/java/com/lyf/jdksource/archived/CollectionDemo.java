@@ -14,25 +14,21 @@
  *    limitations under the License.
  */
 
-package com.lyf.network.base.socket;
+package com.lyf.jdksource.archived;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
+import org.junit.Test;
+
+import java.util.ArrayList;
 
 /**
- * @authorliyunfei
- * @date2022/11/23
- **/
-public class ClientSocketEndPoint {
-    public static void main(String[] args) throws IOException {
-        Socket socket = new Socket();
-        // 请求连接,发起SYN
-        socket.connect(new InetSocketAddress("",99));
-        socket.getInputStream();
-
-        // 断开
-        socket.close();
+ * 集合类源码
+ * 1.集合的类图，继承关系，及特性
+ * 2.并发包下的阻塞队列、以及并发集合
+ * @author liyunfei
+ */
+public class CollectionDemo {
+    @Test
+    public void testBaseCollection(){
+        ArrayList arrayList;
     }
 }

@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package com.lyf.jdksource;
+package com.lyf.jdksource.archived;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.TimeUnit;

@@ -14,25 +14,22 @@
  *    limitations under the License.
  */
 
-package com.lyf.network.base.socket;
+package com.lyf.juc.threadpool;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.util.Timer;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 /**
- * @authorliyunfei
- * @date2022/11/23
+ * @author liyunfei
  **/
-public class ClientSocketEndPoint {
-    public static void main(String[] args) throws IOException {
-        Socket socket = new Socket();
-        // 请求连接,发起SYN
-        socket.connect(new InetSocketAddress("",99));
-        socket.getInputStream();
-
-        // 断开
-        socket.close();
+public class TimerTest {
+    public static void main(String[] args) {
+        //Timer timer = new Timer();
+        //timer.schedule();
+        // ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolExecutor();
+        //scheduledExecutorService.schedule()
+        //Executors.newCachedThreadPool()
     }
 }

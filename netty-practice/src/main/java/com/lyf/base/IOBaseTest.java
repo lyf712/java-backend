@@ -14,19 +14,29 @@
  *    limitations under the License.
  */
 
-package com.lyf.jdksource;
+package com.lyf.base;
 
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.concurrent.ConcurrentHashMap;
+import org.junit.jupiter.api.Test;
+
+import java.nio.channels.SocketChannel;
+
 
 /**
  * @author liyunfei
  **/
-public class SelfHashMap {
-    public static void main(String[] args) {
-        // new HashMap<>()
-        // new ConcurrentHashMap<>()
-       // new Hashtable<>()
+public class IOBaseTest {
+
+    /**
+     * Test Notes:
+     * <h3>BIO</h3>
+     * Socket,ServerSocket base op
+     *
+     * <h3>NIO</h3>
+     * Buffer,Channel,Selector
+     */
+
+    @Test
+    public void testIO(){
+        // SocketChannel
     }
 }

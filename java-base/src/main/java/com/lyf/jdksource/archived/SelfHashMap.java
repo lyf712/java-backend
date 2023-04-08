@@ -14,25 +14,19 @@
  *    limitations under the License.
  */
 
-package com.lyf.network.base.socket;
+package com.lyf.jdksource.archived;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @authorliyunfei
- * @date2022/11/23
+ * @author liyunfei
  **/
-public class ClientSocketEndPoint {
-    public static void main(String[] args) throws IOException {
-        Socket socket = new Socket();
-        // 请求连接,发起SYN
-        socket.connect(new InetSocketAddress("",99));
-        socket.getInputStream();
-
-        // 断开
-        socket.close();
+public class SelfHashMap {
+    public static void main(String[] args) {
+        // new HashMap<>()
+        // new ConcurrentHashMap<>()
+       // new Hashtable<>()
     }
 }

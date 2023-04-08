@@ -14,15 +14,11 @@
  *    limitations under the License.
  */
 
-package com.lyf.jdksource;
-
-import java.util.concurrent.ThreadPoolExecutor;
+package com.lyf.jdksource.archived;
 
 /**
  * @author liyunfei
- **/
-public class SelfThreadPool {
-    public static void main(String[] args) {
-        // new ThreadPoolExecutor()
-    }
+ */
+public interface FatherInterface {
+    int size();
 }

@@ -14,25 +14,15 @@
  *    limitations under the License.
  */
 
-package com.lyf.network.base.socket;
-
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
+package com.lyf.jdksource.archived;
 
 /**
- * @authorliyunfei
- * @date2022/11/23
- **/
-public class ClientSocketEndPoint {
-    public static void main(String[] args) throws IOException {
-        Socket socket = new Socket();
-        // 请求连接,发起SYN
-        socket.connect(new InetSocketAddress("",99));
-        socket.getInputStream();
-
-        // 断开
-        socket.close();
-    }
+ * @author liyunfei
+ */
+public interface SubInterface1 extends FatherInterface{
+    
+    @Override
+    int size();
+    
+    
 }
