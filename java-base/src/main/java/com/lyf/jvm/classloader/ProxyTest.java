@@ -14,26 +14,19 @@
  *    limitations under the License.
  */
 
-package com.lyf.jdksource.strings;
+package com.lyf.jvm.classloader;
 
-import java.lang.invoke.StringConcatFactory;
-import java.util.concurrent.ThreadPoolExecutor;
+import org.junit.Test;
+
+import java.lang.reflect.Proxy;
 
 /**
  * @author liyunfei
  **/
-public class StringSourceAnaysisTest {
-    /**
-     * <h3>String</h3>
-     *
-     */
-    public void test(){
-        String str1 = new String("hello");
-        String str2 = "hello";
-        // StringConcatFactory.makeConcat()
-        // StringBuilder
-        // StringBuffer
-        // Integer.valueOf()
-       // new ThreadPoolExecutor()
+public class ProxyTest {
+    @Test
+    public void testProxy(){
+        // Proxy
     }
+
 }

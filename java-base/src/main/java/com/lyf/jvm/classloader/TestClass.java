@@ -14,26 +14,11 @@
  *    limitations under the License.
  */
 
-package com.lyf.jdksource.strings;
-
-import java.lang.invoke.StringConcatFactory;
-import java.util.concurrent.ThreadPoolExecutor;
+package com.lyf.jvm.classloader;
 
 /**
  * @author liyunfei
  **/
-public class StringSourceAnaysisTest {
-    /**
-     * <h3>String</h3>
-     *
-     */
-    public void test(){
-        String str1 = new String("hello");
-        String str2 = "hello";
-        // StringConcatFactory.makeConcat()
-        // StringBuilder
-        // StringBuffer
-        // Integer.valueOf()
-       // new ThreadPoolExecutor()
-    }
+public class TestClass {
+    public void test(){}
 }
