@@ -14,18 +14,23 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.jvm.compile;
+
+import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.RoundEnvironment;
+import javax.lang.model.element.TypeElement;
+import java.util.Set;
 
 /**
+ * java.compiler.javax.annotation.processing
+ *
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
+public class NameCheckProcessor extends AbstractProcessor {
     @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+    public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
+        //TODO
 
-            // 处理接受的数据
-        }
+        return false;
     }
 }

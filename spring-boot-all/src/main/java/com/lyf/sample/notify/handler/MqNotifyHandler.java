@@ -14,18 +14,19 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.sample.notify.handler;
+
+import com.lyf.sample.notify.AbstractNotify;
+import org.springframework.stereotype.Component;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+@Component
+public class MqNotifyHandler extends AbstractNotify<String,Object> {
 
-            // 处理接受的数据
-        }
+    @Override
+    protected boolean notify(String target, Object msg) {
+        return false;
     }
 }

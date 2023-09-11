@@ -35,5 +35,6 @@ public class JdbcTest {
     public static void main(String[] args) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException {
         Class.forName(dbClassName);//.newInstance();
         conn = DriverManager.getConnection(dbUrl, dbUser, dbPwd);
+
     }
 }

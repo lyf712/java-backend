@@ -14,18 +14,28 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.sample.excutors.threads;
+
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+public class SampleThreadFactory implements ThreadFactory {
 
-            // 处理接受的数据
-        }
+    private final String DOT = ".";
+
+    private AtomicInteger seq = new AtomicInteger();
+
+    private String threadName;
+
+    public SampleThreadFactory(String threadName) {
+        this.threadName = threadName;
+    }
+
+    @Override
+    public Thread newThread(Runnable r) {
+        return new Thread(r,"sample.thread."+threadName+"-"+seq.getAndIncrement());
     }
 }

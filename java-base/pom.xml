@@ -10,6 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
     
     <artifactId>java-base</artifactId>
+
+    <properties>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+
+        <mysql5.version>5.1.26</mysql5.version>
+        <mysql8.version>8.0.30</mysql8.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -56,17 +65,14 @@
 <!--            <artifactId>protobuf-java</artifactId>-->
 <!--            <version>1.0.0</version>-->
 <!--        </dependency>-->
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.30</version>
+            <version>${mysql8.version}</version>
         </dependency>
         
     </dependencies>
     
-    <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-    </properties>
 
 </project>

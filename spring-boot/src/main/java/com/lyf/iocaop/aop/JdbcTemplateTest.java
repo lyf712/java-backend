@@ -23,8 +23,8 @@ import org.springframework.stereotype.Component;
 /**
  * @author liyunfei
  **/
-@Component
+//@Component
 public class JdbcTemplateTest {
-    @Autowired(required = false)
+    //@Autowired(required = false)
     JdbcTemplate jdbcTemplate;
 }

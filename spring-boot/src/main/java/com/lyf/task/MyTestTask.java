@@ -14,18 +14,23 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.task;
+
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+//@Component
+//@EnableScheduling
+public class MyTestTask {
 
-            // 处理接受的数据
-        }
-    }
+//    @Scheduled(fixedRate = 1L)
+//    public void test(){
+//        System.out.println("hello" + new Date());
+//    }
 }

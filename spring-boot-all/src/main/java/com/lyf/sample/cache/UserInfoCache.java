@@ -14,18 +14,29 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.sample.cache;
+
+import com.lyf.sample.domain.entity.UserDO;
+
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+public class UserInfoCache implements Cache<String, UserDO>{
 
-            // 处理接受的数据
-        }
+    private static final ConcurrentHashMap<String,UserDO> USER_MAP = new ConcurrentHashMap<>(1024);
+
+    private static final ConcurrentHashMap<String,Boolean> STATUS_CHECK_MAP = new ConcurrentHashMap<>(1024);
+
+    @Override
+    public UserDO get(String s) {
+
+        return null;
+    }
+
+    @Override
+    public void set(String s, UserDO userDO) {
+
     }
 }

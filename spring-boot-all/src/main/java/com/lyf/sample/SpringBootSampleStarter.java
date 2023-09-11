@@ -14,18 +14,17 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.sample;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
-
-            // 处理接受的数据
-        }
+@SpringBootApplication
+public class SpringBootSampleStarter {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootSampleStarter.class,args);
     }
 }

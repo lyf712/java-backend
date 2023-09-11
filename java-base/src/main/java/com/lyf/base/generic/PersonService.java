@@ -14,18 +14,32 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.base.generic;
+
+import java.util.List;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+public class PersonService<N> implements IService<Person>{
 
-            // 处理接受的数据
+    //N[] ns = new N[5];
+    //N n = new N();
+
+    @Override
+    public List<Person> getList() {
+
+
+        return null;
+    }
+
+    @Override
+    public <M> void set(M m) {
+        // 运行这样使用了？？
+        if(m instanceof Person){
+            System.out.println("set success");
+        }else{
+            System.out.println("set fail");
         }
     }
 }

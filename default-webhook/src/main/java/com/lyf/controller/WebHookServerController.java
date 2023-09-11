@@ -18,13 +18,9 @@ import java.util.Map;
 @RestController
 @RequestMapping("/webhook")
 public class WebHookServerController {
-    
     @PostMapping("/send")
     String webhook(HttpServletRequest request, HttpServletResponse response, @RequestBody Object o) {
         System.out.println(o);
-        //Map<String,Object> map = (Map<String, Object>) o;
-        //System.out.println(map.get("data"));
         return "test";
     }
-    
 }

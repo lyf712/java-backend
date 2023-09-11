@@ -14,18 +14,20 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.alg.newcoder;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
 
-            // 处理接受的数据
-        }
+public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
+
+    public TreeNode(int val) {
+        this.val = val;
+
     }
+
 }

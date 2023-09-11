@@ -14,18 +14,24 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.alg.strs;
+
+import org.junit.Test;
+
+import java.util.ArrayList;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+public class ArrListTest {
+    @Test
+    public void test(){
+//        ArrayList<Integer>[]arrayLists = new ArrayList[10];
+//        arrayLists[0].add(0);
+        ArrayList<ArrayList<Integer>> arrayLists = new ArrayList<>();
+        arrayLists.add(new ArrayList<>());
+        arrayLists.get(0).add(1);
+        //arrayLists.get(0).add(1);
 
-            // 处理接受的数据
-        }
     }
 }

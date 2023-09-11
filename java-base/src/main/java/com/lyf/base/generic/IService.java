@@ -14,18 +14,14 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.base.generic;
+
+import java.util.List;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
-
-            // 处理接受的数据
-        }
-    }
+public interface IService <T>{
+       List<T> getList();
+       <M> void set(M m);
 }

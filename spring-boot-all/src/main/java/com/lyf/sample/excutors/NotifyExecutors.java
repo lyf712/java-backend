@@ -14,18 +14,26 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.sample.excutors;
+
+import com.lyf.sample.excutors.threads.SampleThreadFactory;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+public class NotifyExecutors {
 
-            // 处理接受的数据
-        }
+    private final static ExecutorService NOTIFY_THREAD_POOL
+            = new ThreadPoolExecutor(5,5,0L,
+            TimeUnit.SECONDS,new ArrayBlockingQueue<>(10000),new SampleThreadFactory("notifyThread"));
+
+    public static void submit(Runnable r){
+        NOTIFY_THREAD_POOL.submit(r);
     }
+
 }

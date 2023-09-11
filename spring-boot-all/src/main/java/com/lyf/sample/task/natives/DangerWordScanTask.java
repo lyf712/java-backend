@@ -14,18 +14,29 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.sample.task.natives;
+
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+@Component
+@EnableScheduling
+public class DangerWordScanTask {
 
-            // 处理接受的数据
-        }
+    // db 操作
+
+    // msg (Mq,通知
+
+    @Scheduled(fixedRate = 5000L)
+    public void scanDrgWord(){
+        System.out.println("扫描DB- drgs" + new Date());
+
     }
+
 }

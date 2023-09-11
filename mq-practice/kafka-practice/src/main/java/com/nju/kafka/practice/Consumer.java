@@ -25,6 +25,7 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
+import java.util.Scanner;
 
 /**
  * @authorliyunfei
@@ -34,7 +35,7 @@ public class Consumer {
     private final static String CONSUMER_GROUP_NAME = "testGroup";
 
     public static void main(String[] args) {
-
+        
         // 1.设置消费者的配置信息
         Properties props = makeConsumerProperties();
 

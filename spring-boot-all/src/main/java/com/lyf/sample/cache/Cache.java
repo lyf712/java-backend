@@ -14,18 +14,15 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.sample.cache;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+public interface Cache<K,V> {
 
-            // 处理接受的数据
-        }
-    }
+       V get(K k);
+
+       void set(K k,V v);
+
 }

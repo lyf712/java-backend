@@ -14,18 +14,14 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.sample.domain.entity;
+
+import lombok.Data;
+import lombok.Setter;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
-
-            // 处理接受的数据
-        }
-    }
+@Data
+public class UserDO {
 }

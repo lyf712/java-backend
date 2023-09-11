@@ -7,7 +7,7 @@ learn and practice of java backend,such as javabase,spring,rpc and so on
 
 ## 二、目录介绍
 
-![img.png](files/catalog.png)
+![img.png](znotes/files/catalog.png)
 
 
 ---

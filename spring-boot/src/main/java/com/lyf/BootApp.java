@@ -11,12 +11,14 @@ import javax.annotation.PostConstruct;
 /**
  * @author liyunfei
  */
+
+@Deprecated
 @SpringBootApplication
 public class BootApp {
 
     public static void main(String[] args) {
 
         ConfigurableApplicationContext application = SpringApplication.run(BootApp.class,args);
-        WebSocketController.setApplicationContext(application);
+        //WebSocketController.setApplicationContext(application);
     }
 }

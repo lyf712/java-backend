@@ -14,18 +14,15 @@
  *    limitations under the License.
  */
 
-package org.example.springboot;
+package com.lyf.sample.notify;
 
 /**
  * @author liyunfei
  **/
-public class TomcatServer implements WebServer{
-    @Override
-    public void start() {
-        System.out.println("start tomcat");
-        for (;;){
+public interface NotifyListener {
 
-            // 处理接受的数据
-        }
-    }
+    void onSuccess(Object target,Object msg,boolean result);
+
+    void onException(Exception e,Object target,Object msg);
+
 }
