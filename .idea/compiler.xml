@@ -50,10 +50,12 @@
         <module name="netty-practice" />
         <module name="spring-boot-initilzar" />
         <module name="nacos-spring-config" />
+        <module name="big-data-core" />
         <module name="boot-demo-docker" />
         <module name="service-user" />
         <module name="daily-app-util" />
         <module name="java-interview-code" />
+        <module name="big-data" />
         <module name="rocketmq-practice" />
         <module name="nacos-discorver-config" />
         <module name="spark-learn" />

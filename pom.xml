@@ -38,6 +38,8 @@
         <module>mock-spring-boot/service-user</module>
         <module>web-server</module>
         <module>spring-boot-all</module>
+        <module>big-data</module>
+        <module>big-data/big-data-core</module>
     </modules>
     
     <properties>
