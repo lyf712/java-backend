@@ -16,7 +16,10 @@
 
 package com.lyf.zk;
 
+import com.lyf.core.contants.ConfigConstants;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.zookeeper.*;
+import org.apache.zookeeper.data.Stat;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,15 +38,48 @@ public class ZookeeperTest {
 
     @Before
     public void init() throws IOException, InterruptedException, KeeperException {
-        client = new ZooKeeper(CONN_URL, 10, watchedEvent -> {
+        System.setProperty("zookeeper.sasl.client", "false");
+        client = new ZooKeeper(ConfigConstants.ZK_CLUSTER_URLS, 1000, watchedEvent -> {
 
         });
-
+        // 建立连接需要一定时间
+        Thread.sleep(1000);
     }
 
     @Test
+    public void testGet(){
+        try {
+            List<String> children = client.getChildren("/", new Watcher() {
+                @Override
+                public void process(WatchedEvent watchedEvent) {
+                    System.out.printf("data change: %s"+watchedEvent.getType());
+                    try {
+                        List<String> children = client.getChildren("/",true);
+                        if(CollectionUtils.isNotEmpty(children)){
+                            children.forEach(System.out::println);
+                        }
+                    } catch (KeeperException | InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                }
+            });
+            if(CollectionUtils.isNotEmpty(children)){
+                children.forEach(System.out::println);
+            }
+            // 多路径的创建？
+            //client.create("/config/base","1".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT);
+            byte[] bytes = client.getData("/config",false,new Stat());
+            System.out.println(new String(bytes,0,1));
+            Thread.sleep(10);
+        } catch (KeeperException | InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    @Test
     public void testCreate() throws InterruptedException, KeeperException {
-        Thread.sleep(1000);
         client.create("/test4","data".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE,CreateMode.PERSISTENT);
     }
 }

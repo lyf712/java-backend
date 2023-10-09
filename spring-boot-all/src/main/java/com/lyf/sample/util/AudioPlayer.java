@@ -16,6 +16,8 @@
 
 package com.lyf.sample.util;
 
+import com.dianping.cat.Cat;
+
 import javax.sound.sampled.*;
 import java.io.ByteArrayInputStream;
 import java.io.File;

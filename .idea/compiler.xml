@@ -74,10 +74,6 @@
         <module name="cloud-demo-setinel-dubbo-gateway" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="16">
-      <module name="java8" target="16" />
-      <module name="nacos-learns" target="16" />
-      <module name="spark-test" target="1.8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="16" />
   </component>
 </project>
