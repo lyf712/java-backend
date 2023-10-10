@@ -16,6 +16,7 @@
         <module name="event-bridge" />
         <module name="web-server" />
         <module name="tomcat-learn" />
+        <module name="zuul-server" />
         <module name="grpc-client" />
         <module name="grpc-demo" />
         <module name="spring-boot-all" />

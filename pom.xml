@@ -40,6 +40,7 @@
         <module>spring-boot-all</module>
         <module>big-data</module>
         <module>big-data/big-data-core</module>
+        <module>spring-cloud-nettflix/usage-sample</module>
     </modules>
     
     <properties>

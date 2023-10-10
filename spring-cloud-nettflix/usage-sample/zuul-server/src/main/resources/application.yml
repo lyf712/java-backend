@@ -1,0 +1,11 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: zuul-server
+zuul:
+  routes:
+    product-service:
+      path: /product-service/**
+      url: http://localhost:7070
+
