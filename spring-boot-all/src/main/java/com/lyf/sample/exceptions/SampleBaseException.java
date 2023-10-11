@@ -14,29 +14,10 @@
  *    limitations under the License.
  */
 
-package com.lyf.base;
-
-import org.junit.jupiter.api.Test;
-
-import java.nio.channels.SocketChannel;
-
+package com.lyf.sample.exceptions;
 
 /**
  * @author liyunfei
  **/
-public class IOBaseTest {
-
-    /**
-     * Test Notes:
-     * <h3>BIO</h3>
-     * Socket,ServerSocket base op
-     *
-     * <h3>NIO</h3>
-     * Buffer,Channel,Selector
-     */
-
-    @Test
-    public void testIO(){
-        // SocketChannel
-    }
+public class SampleBaseException {
 }
