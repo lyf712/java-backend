@@ -21,6 +21,7 @@
         <module name="grpc-demo" />
         <module name="spring-boot-all" />
         <module name="spring-base" />
+        <module name="java-guide" />
         <module name="nacos-client1.x" />
         <module name="cloud-demo-discovery-dubbo-provider" />
         <module name="cloud-demo-config" />
@@ -39,6 +40,7 @@
         <module name="nacos-cloud-provider9001" />
         <module name="nacos-cloud-provider9002" />
         <module name="cloud-demo-setinel-dubbo-service-api" />
+        <module name="java-part" />
         <module name="nacos-spring-cloud-config" />
         <module name="cs-base-concept" />
         <module name="cloud-demo-setinel-dubbo-consumer" />

@@ -41,6 +41,8 @@
         <module>big-data</module>
         <module>big-data/big-data-core</module>
         <module>spring-cloud-nettflix/usage-sample</module>
+        <module>java-guide</module>
+        <module>java-guide/java-part</module>
     </modules>
     
     <properties>
