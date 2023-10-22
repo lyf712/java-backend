@@ -17,6 +17,8 @@
 package com.lyf.base.serial;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author liyunfei
@@ -25,6 +27,10 @@ import java.io.Serializable;
 public class SerialObject implements Serializable {
     private Long id;
     private transient Long idCopy;
+
+    // transient
+    //    transient Object[] elementData;
+    private ArrayList<String> list;
 
     private static final long serialVersionUID = 2184959196747496299L;
 
@@ -49,11 +55,22 @@ public class SerialObject implements Serializable {
         this.idCopy = idCopy;
     }
 
+
+    public ArrayList<String> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<String> list) {
+        this.list = list;
+    }
+
+
     @Override
     public String toString() {
         return "SerialObject{" +
                 "id=" + id +
                 ", idCopy=" + idCopy +
+                ", list=" + list +
                 '}';
     }
 }
