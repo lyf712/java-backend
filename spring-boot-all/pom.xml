@@ -92,10 +92,16 @@
         </dependency>
 
         <!--第三方组件依赖-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.dubbo</groupId>-->
+<!--            <artifactId>dubbo</artifactId>-->
+<!--            <version>3.0.4</version>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>3.0.4</version>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>7.0.0</version> <!-- 替换为您所需的版本 -->
         </dependency>
 
         <!--工具包依赖-->

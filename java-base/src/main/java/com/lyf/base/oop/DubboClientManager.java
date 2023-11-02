@@ -14,15 +14,16 @@
  *    limitations under the License.
  */
 
-package com.lyf.sample.rpc.facade.impl;
+package com.lyf.base.oop;
 
-import com.lyf.sample.rpc.facade.SampleCallFacade;
-//import org.apache.dubbo.config.annotation.DubboReference;
+import java.util.Properties;
 
 /**
  * @author liyunfei
  **/
-public class SmapleCallFacadeImpl implements SampleCallFacade {
-    //@DubboReference
-    //private
+public class DubboClientManager extends AbstractClientManager{
+    public DubboClientManager(Properties properties) {
+        super(properties);
+        System.out.printf("Dubbo Init ... %s %d\n",properties==null,System.currentTimeMillis());
+    }
 }

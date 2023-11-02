@@ -14,15 +14,30 @@
  *    limitations under the License.
  */
 
-package com.lyf.sample.rpc.facade.impl;
+package com.lyf.huawei.interview;
 
-import com.lyf.sample.rpc.facade.SampleCallFacade;
-//import org.apache.dubbo.config.annotation.DubboReference;
+import java.util.HashSet;
 
 /**
  * @author liyunfei
  **/
-public class SmapleCallFacadeImpl implements SampleCallFacade {
-    //@DubboReference
-    //private
+public class Main {
+
+    public static void main(String[] args) {
+         int[]arr ={1,2,3,4};
+         method(arr,6);
+    }
+
+    static void method(int[]arr,int targetD){
+        HashSet<Integer> targetSet = new HashSet<>();
+        for(int val:arr){
+            if(!targetSet.isEmpty() && targetSet.contains(val)){
+                System.out.println(val + "," +(targetD-val));
+                break;
+            }else {
+                targetSet.add(targetD-val);
+            }
+        }
+    }
+
 }

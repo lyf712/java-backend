@@ -14,15 +14,13 @@
  *    limitations under the License.
  */
 
-package com.lyf.sample.rpc.facade.impl;
-
-import com.lyf.sample.rpc.facade.SampleCallFacade;
-//import org.apache.dubbo.config.annotation.DubboReference;
+package com.lyf.huawei.practice;
 
 /**
  * @author liyunfei
  **/
-public class SmapleCallFacadeImpl implements SampleCallFacade {
-    //@DubboReference
-    //private
+public class LRUProblem {
+
+
+
 }

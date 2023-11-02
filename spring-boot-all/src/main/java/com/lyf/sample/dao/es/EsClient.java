@@ -14,15 +14,26 @@
  *    limitations under the License.
  */
 
-package com.lyf.sample.rpc.facade.impl;
+package com.lyf.sample.dao.es;
 
-import com.lyf.sample.rpc.facade.SampleCallFacade;
-//import org.apache.dubbo.config.annotation.DubboReference;
+import org.elasticsearch.client.Response;
+import org.elasticsearch.client.RestClient;
+import org.springframework.stereotype.Component;
 
 /**
  * @author liyunfei
  **/
-public class SmapleCallFacadeImpl implements SampleCallFacade {
-    //@DubboReference
-    //private
+@Component
+public class EsClient {
+
+    private final RestClient restClient;
+
+    public EsClient(RestClient restClient) {
+        this.restClient = restClient;
+    }
+
+    void request(){
+      //Response response =  restClient.performRequest()
+
+    }
 }
