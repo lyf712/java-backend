@@ -16,7 +16,7 @@
 
 package com.lyf.sample.strategy;
 
-import com.google.common.collect.Lists;
+//import com.google.common.collect.Lists;
 import com.lyf.sample.domain.dto.AdputResultDTO;
 import com.lyf.sample.domain.entity.Pool;
 import com.lyf.sample.domain.entity.Rule;
@@ -38,6 +38,7 @@ public abstract class AbstractAdPutHandler implements Handler<Pool, Rule, AdputR
 
     protected List<Rule> getRules(){
         //
-       return Lists.newArrayList();
+       //return Lists.newArrayList();
+        return null;
     }
 }

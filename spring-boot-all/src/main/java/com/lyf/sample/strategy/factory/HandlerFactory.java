@@ -35,7 +35,7 @@ public class HandlerFactory {
     @Autowired
     private List<AbstractAdPutHandler> adPutHandlerList;
 
-    @Autowired
+    //@Autowired
     private List<Handler<Pool, Rule, ResultDTO>> handlers;
 
     public List<AbstractAdPutHandler> getAdPutHandlerList() {

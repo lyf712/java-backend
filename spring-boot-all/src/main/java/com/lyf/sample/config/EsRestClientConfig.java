@@ -31,7 +31,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class EsRestClientConfig {
 
-    @Value("")
+    @Value("spring.elasticsearch.uris")
     private String esHost;
 
     @Bean
