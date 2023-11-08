@@ -16,17 +16,31 @@
 
 package com.lyf.sample;
 
+import org.junit.Assert;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+
+import java.util.Random;
 
 /**
  * @author liyunfei
  **/
-public class EnvTests {
+public class MockitoTests {
+
+    @Mock
+    private Repo db;// = new Repo();
+
     @Test
-    public void testEnv(){
-        System.out.println(System.getenv("CAT_HOME"));
-        System.out.println(System.getenv("JAVA_HOME"));
-        System.out.println(System.getenv("HELLO"));
-        System.out.println(System.getenv("CATALINA_OPTS"));
+    public void test(){
+        Mockito.when(db.cnt()).thenReturn(1);
+        Assert.assertEquals(db.cnt(),1);
     }
+
+    private static class Repo{
+        int cnt(){
+            return new Random().nextInt(10);
+        }
+    }
+
 }

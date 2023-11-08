@@ -14,19 +14,23 @@
  *    limitations under the License.
  */
 
-package com.lyf.sample;
-
-import org.junit.Test;
+package com.lyf.juc.base.volatilec;
 
 /**
  * @author liyunfei
  **/
-public class EnvTests {
-    @Test
-    public void testEnv(){
-        System.out.println(System.getenv("CAT_HOME"));
-        System.out.println(System.getenv("JAVA_HOME"));
-        System.out.println(System.getenv("HELLO"));
-        System.out.println(System.getenv("CATALINA_OPTS"));
+public class ConfigExample {
+    private static  boolean isInit = false;
+
+    public static void main(String[] args) {
+
+        ///
+        while (isInit){
+            //..
+        }
+
+
     }
+
+
 }

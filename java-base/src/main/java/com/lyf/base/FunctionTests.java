@@ -14,19 +14,38 @@
  *    limitations under the License.
  */
 
-package com.lyf.sample;
+package com.lyf.base;
 
 import org.junit.Test;
+
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * @author liyunfei
  **/
-public class EnvTests {
+public class FunctionTests {
+
     @Test
-    public void testEnv(){
-        System.out.println(System.getenv("CAT_HOME"));
-        System.out.println(System.getenv("JAVA_HOME"));
-        System.out.println(System.getenv("HELLO"));
-        System.out.println(System.getenv("CATALINA_OPTS"));
+    public void test(){
+      action("hello",val->{
+          val += "test";
+          System.out.println(val);
+      });
+
+      action("1","2",(k)->{
+          System.out.println(k);
+          return "rs---";
+      });
+
+    }
+
+    private void action(String key, String value, Function<String,String> function){
+        String rs = function.apply(key);
+        System.out.println(rs);
+    }
+
+    private void action(String val,Consumer<String> consumer){
+        consumer.accept(val);
     }
 }

@@ -32,15 +32,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class CatController {
     @GetMapping("/test")
     public String get(){
-        Transaction t = Cat.newTransaction("URL","cat_test");
+        Transaction t = Cat.newTransaction("URL_TEST","cat_test");
         try {
+            Cat.logEvent("URL_TEST_EVENT","test1");
+            t.setStatus(Transaction.SUCCESS);
+            t.addData("content");
             // Transaction.SUCCESS
             //Transaction.
-            t.setStatus("handle");
+            //t.setStatus("handle");
             goodsRpc1();
             int i = 1/0;
         }catch (Exception e){
             t.setStatus(e);
+            Cat.logError(e);
         }finally {
             t.complete();
         }
