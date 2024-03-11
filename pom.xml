@@ -15,17 +15,14 @@
         <module>nacos-practice</module>
         <module>spring-cloud-nettflix</module>
 <!--        <module>nacos-cloud-discovery</module>-->
-        <module>spring-boot</module>
         <module>rpc-practice</module>
         <module>mq-practice</module>
         <module>netty-practice</module>
-        <module>default-webhook</module>
-        <module>communication-network</module>
+        <module>java-network</module>
         <module>spring-boot-initilzar</module>
         <module>os-mock-practice</module>
-        <module>spring-boot-demos</module>
         <module>tomcat-learn</module>
-        <module>daily-app-util</module>
+        <module>java-util</module>
         <module>java-webservice</module>
         <module>java-crawler</module>
         <module>mq-practice/kafka-practice</module>
@@ -36,8 +33,7 @@
         <module>mock-spring-boot</module>
         <module>mock-spring-boot/my-spring-boot</module>
         <module>mock-spring-boot/service-user</module>
-        <module>web-server</module>
-        <module>spring-boot-all</module>
+        <module>spring-boot</module>
         <module>big-data</module>
         <module>big-data/big-data-core</module>
         <module>spring-cloud-nettflix/usage-sample</module>
@@ -57,6 +53,12 @@
                 <artifactId>junit</artifactId>
                 <version>4.13.2</version>
                 <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.20</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

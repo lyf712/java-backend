@@ -14,12 +14,10 @@
         <module name="cloud-demo-discovery-consumer" />
         <module name="nacos-spring-discorvery" />
         <module name="event-bridge" />
-        <module name="web-server" />
         <module name="tomcat-learn" />
         <module name="zuul-server" />
         <module name="grpc-client" />
         <module name="grpc-demo" />
-        <module name="spring-boot-all" />
         <module name="spring-base" />
         <module name="java-guide" />
         <module name="nacos-client1.x" />
@@ -27,14 +25,14 @@
         <module name="cloud-demo-config" />
         <module name="spring-cloud-nettflix" />
         <module name="grpc-api" />
-        <module name="default-webhook" />
         <module name="cloud-stream-rocketmq-kafka" />
         <module name="base-network" />
         <module name="my-spring-boot" />
+        <module name="java-util" />
         <module name="nacos-spring-boot-config" />
         <module name="simple-demo" />
-        <module name="spring-boot" />
         <module name="cxf-client" />
+        <module name="spring-boot" />
         <module name="nacos-cloud-consumer81" />
         <module name="nacos-provider1001" />
         <module name="nacos-cloud-provider9001" />
@@ -54,9 +52,7 @@
         <module name="spring-boot-initilzar" />
         <module name="nacos-spring-config" />
         <module name="big-data-core" />
-        <module name="boot-demo-docker" />
         <module name="service-user" />
-        <module name="daily-app-util" />
         <module name="java-interview-code" />
         <module name="big-data" />
         <module name="rocketmq-practice" />
@@ -77,6 +73,11 @@
         <module name="cloud-demo-setinel-dubbo-gateway" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="16" />
+    <bytecodeTargetLevel target="16">
+      <module name="boot-demo-docker" target="16" />
+      <module name="default-webhook" target="16" />
+      <module name="spring-boot-demos" target="16" />
+      <module name="web-server" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>

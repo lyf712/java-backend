@@ -16,14 +16,10 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/java8/pom.xml" />
-        <option value="$PROJECT_DIR$/nacos-clients/pom.xml" />
-        <option value="$PROJECT_DIR$/nacos-cloud-discovery/pom.xml" />
-        <option value="$PROJECT_DIR$/nacos-discovery-config/pom.xml" />
-        <option value="$PROJECT_DIR$/nacos-learns/pom.xml" />
-        <option value="$PROJECT_DIR$/nacos-practice/nacos-client2.x/pom.xml" />
-        <option value="$PROJECT_DIR$/nacos-practice/nacos-clients/nacos-cloud-discovery/pom.xml" />
-        <option value="$PROJECT_DIR$/spark-test/pom.xml" />
+        <option value="$PROJECT_DIR$/default-webhook/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demos/boot-demo-docker/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demos/pom.xml" />
+        <option value="$PROJECT_DIR$/web-server/pom.xml" />
       </set>
     </option>
   </component>
