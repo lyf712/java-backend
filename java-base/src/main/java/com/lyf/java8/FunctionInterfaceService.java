@@ -14,24 +14,16 @@
  *    limitations under the License.
  */
 
-package com.lyf.books.springcorenote.ioc;
+package com.lyf.java8;
 
-import org.junit.Test;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import java.util.function.Consumer;
 
 /**
- * @authorliyunfei
- * @date2022/10/23
+ * 函数接口
+ * @author liyunfei
  **/
-public class BeanTests {
-    /**
-     * ..Aware,..Processor,..Accessor
-     */
-    @Test
-    public void testBeanFactory() {
-        //BeanFactory beanFactory = new AnnotationConfigApplicationContext();
+public interface FunctionInterfaceService {
 
+    void consume(Consumer<String> consumer);
 
-    }
 }

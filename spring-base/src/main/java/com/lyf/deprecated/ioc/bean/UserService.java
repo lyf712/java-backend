@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package com.lyf.ioc.bean;
+package com.lyf.deprecated.ioc.bean;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -14,11 +14,11 @@
  *    limitations under the License.
  */
 
-package com.lyf.books.springcorenote.ioc;
+package com.lyf.deprecated.ioc;
 
 /**
- * @authorliyunfei
- * @date2022/10/23
- **/
-public class ContextTests {
+ * @author liyunfei
+ */
+public class TestBean {
+
 }

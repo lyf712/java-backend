@@ -14,10 +14,17 @@
  *    limitations under the License.
  */
 
-package com.lyf.util;
+package com.lyf.deprecated.servlets;
+
+import org.junit.Test;
 
 /**
  * @author liyunfei
- **/
-public class C {
+ */
+public class ServletTests {
+    @Test
+    public void testServlet(){
+
+    
+    }
 }

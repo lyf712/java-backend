@@ -30,6 +30,12 @@
             <version>3.17</version>
         </dependency>
 
+        <!--
+         1.google包，
+         2.common-lang包
+
+        -->
+
     </dependencies>
     
     <properties>

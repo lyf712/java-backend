@@ -14,10 +14,16 @@
  *    limitations under the License.
  */
 
-package com.lyf.ioc.bean;
+package com.lyf.java8;
+
+import java.util.function.Consumer;
 
 /**
  * @author liyunfei
  **/
-public class User {
+public class FunctionInterfaceServiceImpl implements FunctionInterfaceService{
+    @Override
+    public void consume(Consumer<String> consumer) {
+        //consumer.accept();
+    }
 }
