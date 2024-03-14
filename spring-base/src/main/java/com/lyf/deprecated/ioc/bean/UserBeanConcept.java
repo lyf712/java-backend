@@ -26,7 +26,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author liyunfei
  **/
-@Slf4j
+//@Slf4j
 @Component
 public class UserBeanConcept implements InitializingBean {
     // ------------base concept-------

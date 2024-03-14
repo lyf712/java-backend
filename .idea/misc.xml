@@ -7,20 +7,15 @@
     <option name="priority" value="Medium" />
     <option name="excludeFilter" value="" />
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ssm-base" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-initilzar/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/default-webhook/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-demos/boot-demo-docker/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-demos/pom.xml" />
-        <option value="$PROJECT_DIR$/web-server/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="corretto-16" project-jdk-type="JavaSDK">

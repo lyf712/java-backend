@@ -39,6 +39,7 @@
         <module>spring-cloud-nettflix/usage-sample</module>
         <module>java-guide</module>
         <module>java-guide/java-part</module>
+        <module>ssm-base</module>
     </modules>
     
     <properties>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/ssm-base/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/ssm-base/src/main/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/ssm-base/src/main/java" />
+          <root url="file://$MODULE_DIR$/ssm-base/src/main/resources" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Applciation Context" removed="false">
+          <file>file://$MODULE_DIR$/ssm-base/src/main/resources/spring/applciation-context.xml</file>
+          <file>file://$MODULE_DIR$/ssm-base/src/main/resources/spring/dispatcher-servlet.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+</module>

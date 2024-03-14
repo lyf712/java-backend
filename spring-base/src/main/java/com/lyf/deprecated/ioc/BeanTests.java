@@ -18,7 +18,8 @@ package com.lyf.deprecated.ioc;
 
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
+// spring5
+///import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -41,8 +42,8 @@ public class BeanTests {
     
     @Test
     public void testIocBean(){
-        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("BeanFactory.xml"));
-        TestBean testBean = beanFactory.getBean(TestBean.class);
+        //BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("BeanFactory.xml"));
+        //estBean testBean = beanFactory.getBean(TestBean.class);
         
     }
     
