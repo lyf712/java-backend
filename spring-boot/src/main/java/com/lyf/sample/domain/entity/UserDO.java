@@ -19,9 +19,24 @@ package com.lyf.sample.domain.entity;
 import lombok.Data;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * @author liyunfei
  **/
 @Data
-public class UserDO {
+public class UserDO implements Serializable {
+
+    private Integer id;
+
+    private String name;
+
+    private String email;
+
+    private Integer age;
+
+    private Integer sex;
+
+    private String schoolName;
+
 }

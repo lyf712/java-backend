@@ -14,6 +14,7 @@
         <module name="cloud-demo-discovery-consumer" />
         <module name="nacos-spring-discorvery" />
         <module name="event-bridge" />
+        <module name="java-concurrent" />
         <module name="tomcat-learn" />
         <module name="zuul-server" />
         <module name="grpc-client" />

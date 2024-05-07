@@ -21,4 +21,6 @@ package com.lyf.sample.service;
  **/
 public interface LoginService {
 
+    boolean login(String username,String password) throws Exception;
+
 }

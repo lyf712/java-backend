@@ -16,12 +16,35 @@
 
 package com.lyf.sample.service.impl;
 
+import com.lyf.sample.dao.mapper.UserMapper;
+import com.lyf.sample.domain.entity.UserDO;
 import com.lyf.sample.service.LoginService;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author liyunfei
  **/
 @Service
 public class LoginServiceImpl implements LoginService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Override
+    public boolean login(String username, String password) throws Exception{
+        if (StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
+            throw new IllegalArgumentException("参数错误");
+        }
+        List<UserDO> userDOS = userMapper.queryUserBySchoolName(username);
+        if (userDOS == null || userDOS.isEmpty()) {
+            return false;
+        }
+        List<UserDO> collect = userDOS.stream().filter(userDO -> userDO != null && userDO.getEmail().equals(password)).collect(Collectors.toList());
+        return collect.size() == 1;
+    }
 }

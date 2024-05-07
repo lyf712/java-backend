@@ -40,6 +40,7 @@
         <module>java-guide</module>
         <module>java-guide/java-part</module>
         <module>ssm-base</module>
+        <module>java-concurrent</module>
     </modules>
     
     <properties>
